@@ -9,6 +9,11 @@
     line-height: 20px;
   }
 
+  img {
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+  }
+
   .skills-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

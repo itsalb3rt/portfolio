@@ -7,7 +7,6 @@ const Navbar = () => {
         <div className="navbar-wrapper">
           <div
             role="button"
-            onClick={() => scrollTo("#home")}
             className="name"
             tabIndex={0}
           >

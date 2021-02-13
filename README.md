@@ -2,7 +2,7 @@
 
 ![Web 1920 – 1](https://user-images.githubusercontent.com/16558205/101065060-b44bfc80-35ba-11eb-8ab4-1e6f140c1ec9.png)
 
-To view a live example, **[click here](https://react-portfolio-template.netlify.app/)**.
+To view a live example, **[click here](https://albert-portfolio.netlify.app/)**.
 
 
 Just change `src/yourdata.js` to get your personal portfolio. Feel free to use it as-is or customize it as much as you want.
@@ -33,7 +33,7 @@ From your command line, clone and run react-portfolio-template:
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/chetanverma16/react-portfolio-template
+$ git clone https://github.com/itsalb3rt/portfolio
 
 # Go into the repository
 $ cd react-portfolio-template
@@ -84,4 +84,3 @@ Please don't hesitate to open a [pull request](https://github.com/chetanverma16/
 
 ## Thanks
 If you like this portfolio template don't forget give it a ⭐ and also share it with me at [here](mailto:hello@chetanverma.com)
-

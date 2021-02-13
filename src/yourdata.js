@@ -1,10 +1,10 @@
 // Skills Icons
-import htmlIcon from "./images/html.svg"
-import cssIcon from "./images/css.svg"
+import dockerIcon from "./images/docker.svg"
+import vueIcon from "./images/vue.png"
+import nodejsLogo from "./images/nodejs.png"
 import reactIcon from "./images/react.svg"
-import jsIcon from "./images/javascript.svg"
+import jsIcon from "./images/js.png"
 import designIcon from "./images/design.svg"
-import codeIcon from "./images/code.svg"
 
 // Social Icon
 import githubIcon from "./images/github.svg"
@@ -135,41 +135,35 @@ export default {
 
   skills: [
     {
-      id: 1,
       img: jsIcon,
       para:
-        "Extensive knowledge in the foundations of the language and different frameworks",
+        "Extensive knowledge in the foundations of the language and different frameworks.",
     },
     {
-      id: 2,
-      img: cssIcon,
+      img: nodejsLogo,
       para:
-        "Creativity and wide command of CSS that has been built throughout his career.",
+        "Experience in creating restful APIs using Node Js, Express, Sequelize among other server-side tools.",
     },
     {
-      id: 3,
-      img: htmlIcon,
+      img: dockerIcon,
       para:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        "Extensive professional experience with Docker, traefik and more. Technical studies at Platzi.",
     },
     {
-      id: 4,
+      img: vueIcon,
+      para:
+        "Vue is the tool of choice for building multi-purpose web applications, Vuex, Vue router, Quasar and much more.",
+    },
+    {
       img: reactIcon,
       para:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        "Professional experience working with React, redux, redux form and many more tools of the react ecosystem.",
     },
     {
-      id: 5,
       img: designIcon,
       para:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
-    },
-    {
-      id: 6,
-      img: codeIcon,
-      para:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
-    },
+        "Knowledge of graphic interface design and user experience, prototyping with Adobe XD.",
+    }
   ],
 
   // End Skills Section --------------------------

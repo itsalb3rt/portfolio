@@ -8,8 +8,8 @@ import designIcon from "./images/design.svg"
 
 // Social Icon
 import githubIcon from "./images/github.svg"
-import codepenIcon from "./images/codepen.svg"
 import instagramIcon from "./images/instagram.svg"
+import twitterIcon from "./images/twitter.png"
 
 export default {
   //(Please Do Not Remove The comma(,) after every variable)
@@ -182,8 +182,8 @@ export default {
     // Add Or Remove The Link Accordingly
     { img: githubIcon, url: "https://github.com/itsalb3rt" },
     {
-      img: codepenIcon,
-      url: "https://codepen.io/itsalb3rt",
+      img: twitterIcon,
+      url: "https://twitter.com/alhidalgodev",
     },
     {
       img: instagramIcon,

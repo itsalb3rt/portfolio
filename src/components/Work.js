@@ -13,7 +13,7 @@ const Work = () => {
             <h1>Work</h1>
           </Fade>
 
-          <div className="grid">
+          <div className="grid project-container">
             <Fade bottom cascade>
               {data.projects.map(project => (
                 <Card

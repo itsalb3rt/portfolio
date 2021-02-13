@@ -9,7 +9,6 @@ import codeIcon from "./images/code.svg"
 // Social Icon
 import githubIcon from "./images/github.svg"
 import codepenIcon from "./images/codepen.svg"
-import dribbbleIcon from "./images/dribbble.svg"
 import instagramIcon from "./images/instagram.svg"
 
 export default {
@@ -187,18 +186,14 @@ export default {
   contactSubHeading: "Let's create your next experience together",
   social: [
     // Add Or Remove The Link Accordingly
-    { img: githubIcon, url: "https://github.com/chetanverma16" },
+    { img: githubIcon, url: "https://github.com/itsalb3rt" },
     {
       img: codepenIcon,
-      url: "https://www.codepen.com/",
-    },
-    {
-      img: dribbbleIcon,
-      url: "https://dribbble.com/chetanverma",
+      url: "https://codepen.io/itsalb3rt",
     },
     {
       img: instagramIcon,
-      url: "https://www.instagram.com/",
+      url: "https://www.instagram.com/itsalb3rt/",
     },
   ],
 

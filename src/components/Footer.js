@@ -15,8 +15,9 @@ const Footer = () => {
             {data.contactEmail}
           </a>
           <div className="social-icons">
-            {data.social.map(socialLink => (
+            {data.social.map((socialLink, index) => (
               <a
+                key={`social-${index}`}
                 href={socialLink.url}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -26,7 +27,7 @@ const Footer = () => {
             ))}
           </div>
           <span>
-            Made With <icon>❤</icon> by{" "}
+            Made With <span className="icon">❤</span> by{" "}
             <a href="https://www.chetanverma.com/">Chetan Verma</a>
           </span>
         </div>

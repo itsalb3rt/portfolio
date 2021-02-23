@@ -17,6 +17,7 @@ import sheileyShopImage from './images/sheiley-shop.png'
 import aftermanImage from './images/afterman.png'
 import cloudCsvimage from './images/cloudcsv.png'
 import agileVisitorsImage from './images/agile-visitors.png'
+import moreProjectsImage from './images/more-projects.png'
 
 export default {
   //(Please Do Not Remove The comma(,) after every variable)
@@ -34,7 +35,7 @@ export default {
   ],
   //   Header Paragraph
   headerParagraph:
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
+    "Planing, design, development, quality assurance.",
 
   //Contact Email
   contactEmail: "alhidalgodev@gmail.com",
@@ -93,8 +94,7 @@ export default {
       para:
         "Explore all my open source projects.", // Add Your Service Type Here
       //Project Image - Add Your Project Image Here
-      imageSrc:
-        "https://images.unsplash.com/photo-1517479149777-5f3b1511d5ad?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTAyfHxwYXN0ZWx8ZW58MHx8MHw%3D&auto=format&fit=crop&w=400&q=60",
+      imageSrc: moreProjectsImage,
       //Project URL - Add Your Project Url Here
       url: "https://github.com/itsalb3rt",
     },

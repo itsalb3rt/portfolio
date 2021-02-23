@@ -11,6 +11,13 @@ import githubIcon from "./images/github.svg"
 import instagramIcon from "./images/instagram.svg"
 import twitterIcon from "./images/twitter.png"
 
+// Work images
+import bohiosImage from './images/bohios.png'
+import sheileyShopImage from './images/sheiley-shop.png'
+import aftermanImage from './images/afterman.png'
+import cloudCsvimage from './images/cloudcsv.png'
+import agileVisitorsImage from './images/agile-visitors.png'
+
 export default {
   //(Please Do Not Remove The comma(,) after every variable)
   //Change The Website Template
@@ -37,62 +44,51 @@ export default {
   // Work Section ------------------------
   projects: [
     {
-      id: 1, //DO NOT CHANGE THIS (Please)😅
       title: "Bohios", //Project Title - Add Your Project Title Here
       para:
         "For real estate agencies, agents & individuals looking to promote, sell or rent their properties.", // Add Your Service Type Here
       //Project Image - Add Your Project Image Here
-      imageSrc:
-        "https://www.bohios.net/mainlogo.png",
+      imageSrc: bohiosImage,
       //Project URL - Add Your Project Url Here
       url: "https://play.google.com/store/apps/details?id=com.bohios.bohios",
     },
     {
-      id: 2, //DO NOT CHANGE THIS (Please)😅
-      title: "Afterman", //Project Title - Add Your Project Title Here
-      para:
-        "Create beutiful docs in markdown and HTML from postman collection.", // Add Your Service Type Here
-      //Project Image - Add Your Project Image Here
-      imageSrc:
-        "https://camo.githubusercontent.com/fc0f324963ca646f02532dc70d4a977c79eb276235192c8176b28673deabac73/68747470733a2f2f692e6962622e636f2f51636a375373672f6d61696e2e706e67",
-      //Project URL - Add Your Project Url Here
-      url: "https://github.com/itsalb3rt/afterman",
-    },
-    {
-      id: 3, //DO NOT CHANGE THIS (Please)😅
-      title: "Cloudcsv", //Project Title - Add Your Project Title Here
-      para:
-        "Open source web application for the storage of dynamic CSV files, user management, email notifications and more.", // Add Your Service Type Here
-      //Project Image - Add Your Project Image Here
-      imageSrc:
-        "https://camo.githubusercontent.com/b6589073158df98a876ca00bffa2e365aaad5de6cf6d543d6a64fd6146e98db6/68747470733a2f2f692e696d6775722e636f6d2f5a5770474a324b2e706e67",
-      //Project URL - Add Your Project Url Here
-      url: "https://github.com/itsalb3rt/cloudcsv",
-    },
-    {
-      id: 4, //DO NOT CHANGE THIS (Please)😅
       title: "Sheiley Shop", //Project Title - Add Your Project Title Here
       para:
         "Sheiley Shop is a PWA to track personal purchases, No more paper and pencil to go to the supermarket.", // Add Your Service Type Here
       //Project Image - Add Your Project Image Here
-      imageSrc:
-        "https://camo.githubusercontent.com/abc7904699f508c865eca6b24ed69ed52b68c206c23cef5ae696c0ad8384e9a6/68747470733a2f2f692e696d6775722e636f6d2f6e4c436f5152722e706e67",
+      imageSrc: sheileyShopImage,
       //Project URL - Add Your Project Url Here
       url: "https://github.com/itsalb3rt/sheiley_shop_app",
     },
     {
-      id: 5, //DO NOT CHANGE THIS (Please)😅
+      title: "Afterman", //Project Title - Add Your Project Title Here
+      para:
+        "Create beutiful docs in markdown and HTML from postman collection.", // Add Your Service Type Here
+      //Project Image - Add Your Project Image Here
+      imageSrc: aftermanImage,
+      //Project URL - Add Your Project Url Here
+      url: "https://github.com/itsalb3rt/afterman",
+    },
+    {
+      title: "Cloudcsv", //Project Title - Add Your Project Title Here
+      para:
+        "Open source web application for the storage of dynamic CSV files, user management, email notifications and more.", // Add Your Service Type Here
+      //Project Image - Add Your Project Image Here
+      imageSrc: cloudCsvimage,
+      //Project URL - Add Your Project Url Here
+      url: "https://github.com/itsalb3rt/cloudcsv",
+    },
+    {
       title: "Agile Visitors", //Project Title - Add Your Project Title Here
       para:
         "Application for registering employee entries with the possibility of generating reports, validating and storing users with minimal effort.", // Add Your Service Type Here
       //Project Image - Add Your Project Image Here
-      imageSrc:
-        "https://raw.githubusercontent.com/itsalb3rt/agile-visitors/master/src/assets/DEMO-image-mobile-1.PNG",
+      imageSrc: agileVisitorsImage,
       //Project URL - Add Your Project Url Here
       url: "https://github.com/itsalb3rt/agile-visitors"
     },
     {
-      id: 6, //DO NOT CHANGE THIS (Please)😅
       title: "More", //Project Title - Add Your Project Title Here
       para:
         "Explore all my open source projects.", // Add Your Service Type Here
@@ -170,7 +166,7 @@ export default {
 
   //   Promotion Section --------------------------
 
-  promotionHeading: "Heading",
+  promotionHeading: "My recent activity on the internet",
   promotionPara:
     "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
   // End Promotion Section -----------------

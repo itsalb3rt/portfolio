@@ -8,7 +8,14 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-
+  border-radius: 4px;
+  box-shadow: 0 5px 10px rgba(154,160,185,.05), 0 15px 40px rgba(166,173,201,.2);
+  transition: all 500ms ease-in-out;
+  
+  &:hover{
+    transform: scale(1.1);
+    box-shadow: 0 7px 30px -10px rgba(150,170,180,0.5);
+  }
   .content {
     font-family: "Open Sans";
     text-align: center;

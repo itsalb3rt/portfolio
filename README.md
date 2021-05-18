@@ -36,13 +36,13 @@ From your command line, clone and run react-portfolio-template:
 $ git clone https://github.com/itsalb3rt/portfolio
 
 # Go into the repository
-$ cd react-portfolio-template
+$ cd portfolio
 
 # Install dependencies
 $ yarn
 
 #Start's development server
-$ gatsby develop
+$ yarn start
 ```
 
 #### Personalize page content in `/src/yourdata.js` & modify it as per your need.

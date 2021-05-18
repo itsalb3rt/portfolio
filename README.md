@@ -42,7 +42,7 @@ $ cd portfolio
 $ yarn
 
 #Start's development server
-$ yarn start
+$ yarn develop
 ```
 
 #### Personalize page content in `/src/yourdata.js` & modify it as per your need.

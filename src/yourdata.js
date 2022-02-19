@@ -12,6 +12,7 @@ import instagramIcon from "./images/instagram.svg"
 import twitterIcon from "./images/twitter.png"
 
 // Work images
+import facilPiezasImage from './images/facil-piezas.jpg'
 import bohiosImage from './images/bohios.png'
 import sheileyShopImage from './images/sheiley-shop.png'
 import aftermanImage from './images/afterman.png'
@@ -44,6 +45,15 @@ export default {
 
   // Work Section ------------------------
   projects: [
+    {
+      title: "Fácil Piezas", //Project Title - Add Your Project Title Here
+      para:
+        "Android, IOS and Web App for sale of vehicle parts, geolocation, in app chat and mucho more features", // Add Your Service Type Here
+      //Project Image - Add Your Project Image Here
+      imageSrc: facilPiezasImage,
+      //Project URL - Add Your Project Url Here
+      url: "https://facilpiezas.com.do",
+    },
     {
       title: "Bohios", //Project Title - Add Your Project Title Here
       para:

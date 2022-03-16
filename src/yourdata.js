@@ -39,7 +39,7 @@ export default {
     "Planing, design, development, quality assurance.",
 
   //Contact Email
-  contactEmail: "alhidalgodev@gmail.com",
+  contactEmail: "contact@albert.do",
 
   // End Header Details -----------------------
 

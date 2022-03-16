@@ -48,7 +48,7 @@ export default {
     {
       title: "Fácil Piezas", //Project Title - Add Your Project Title Here
       para:
-        "Android, IOS and Web App for sale of vehicle parts, geolocation, in app chat and mucho more features", // Add Your Service Type Here
+        "Android, IOS and Web App for sale of vehicle parts, geolocation, in app chat and much more features", // Add Your Service Type Here
       //Project Image - Add Your Project Image Here
       imageSrc: facilPiezasImage,
       //Project URL - Add Your Project Url Here

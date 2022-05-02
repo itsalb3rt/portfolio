@@ -19,6 +19,7 @@ import aftermanImage from './images/afterman.png'
 import cloudCsvimage from './images/cloudcsv.png'
 import agileVisitorsImage from './images/agile-visitors.png'
 import moreProjectsImage from './images/more-projects.png'
+import taVivoImage from './images/taVivo.png'
 
 export default {
   //(Please Do Not Remove The comma(,) after every variable)
@@ -45,6 +46,12 @@ export default {
 
   // Work Section ------------------------
   projects: [
+    {
+      title: "Ta vivo",
+      para: "Check if you API or web is down made easy",
+      imageSrc: taVivoImage,
+      url: "https://landing-tavivo.albert.do",
+    },
     {
       title: "Fácil Piezas", //Project Title - Add Your Project Title Here
       para:

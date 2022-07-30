@@ -6,6 +6,23 @@ const Footer = () => {
   return (
     <div className="section" id="contact">
       <div className="container">
+
+        <div>
+          <h1>Special Sponsors</h1>
+          <div className="sponsors-container">
+            {data.sponsors.map((sponsor, index) => (
+              <a
+                key={`sponsor-${index}`}
+                href={sponsor.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src={sponsor.img} alt="sponsor"></img>
+              </a>
+            ))}
+          </div>
+        </div>
+        
         <div className="footer-container">
           <Fade bottom cascade>
             <h1>Contact</h1>

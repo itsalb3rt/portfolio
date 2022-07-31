@@ -16,6 +16,7 @@ const Navbar = () => {
             <button onClick={() => scrollTo("#work")}>Work</button>
             <button onClick={() => scrollTo("#about")}>About</button>
             <button onClick={() => scrollTo("#contact")}>Contact</button>
+            <button onClick={() => window.location.href = "https://blog.albert.do"}>Blog</button>
           </div>
         </div>
       </div>

@@ -20,6 +20,7 @@ import cloudCsvimage from './images/cloudcsv.png'
 import agileVisitorsImage from './images/agile-visitors.png'
 import moreProjectsImage from './images/more-projects.png'
 import taVivoImage from './images/taVivo.png'
+import cowofiImage from './images/cowofi.png'
 
 export default {
   //(Please Do Not Remove The comma(,) after every variable)
@@ -51,6 +52,12 @@ export default {
       para: "Check if you API or web is down made easy",
       imageSrc: taVivoImage,
       url: "https://landing-tavivo.albert.do",
+    },
+    {
+      title: "Cowofi",
+      para: "Find perfect working space near you!",
+      imageSrc: cowofiImage,
+      url: "https://cowofi.netlify.app",
     },
     {
       title: "Fácil Piezas", //Project Title - Add Your Project Title Here

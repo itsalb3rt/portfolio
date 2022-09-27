@@ -172,7 +172,7 @@ export default {
     {
       img: vueIcon,
       para:
-        "Vue is the tool of choice for building multi-purpose web applications, Vuex, Vue router, Quasar and much more.",
+        "Experience with Vue building multi-purpose web applications and mobile APPs, Vuex, Vue router, Quasar Framework and much more.",
     },
     {
       img: reactIcon,

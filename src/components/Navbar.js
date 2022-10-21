@@ -1,5 +1,7 @@
 import React from "react"
 import scrollTo from "gatsby-plugin-smoothscroll"
+import externalLinkIcon from "../images/external-link.png"
+
 const Navbar = () => {
   return (
     <div className="section">
@@ -16,7 +18,9 @@ const Navbar = () => {
             <button onClick={() => scrollTo("#work")}>Work</button>
             <button onClick={() => scrollTo("#about")}>About</button>
             <button onClick={() => scrollTo("#contact")}>Contact</button>
-            <button onClick={() => window.location.href = "https://blog.albert.do"}>Blog</button>
+            <button onClick={() => window.location.href = "https://blog.albert.do"}>
+              Blog <img style={{ width: 10 }} src={externalLinkIcon} alt="sponsor"></img>
+            </button>
           </div>
         </div>
       </div>

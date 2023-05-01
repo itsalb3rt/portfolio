@@ -202,13 +202,7 @@ export default {
   ],
 
   // End Contact Section ---------------
-  sponsors: [
-    {
-      img: 'https://avatars.githubusercontent.com/u/539774?v=4',
-      url: 'https://github.com/psanders',
-
-    }
-  ]
+  sponsors: []
 }
 
 // Thanks for using this template, I would love to hear from you contact me at hello@chetanverma.com

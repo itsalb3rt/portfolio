@@ -48,9 +48,9 @@ export default {
   projects: [
     {
       title: "Ta vivo",
-      para: "Check if you API or web is down made easy",
+      para: "Check if your service is down before your customers. Get notification via Discord, Email, Slack, Telegram or WhatsApp.",
       imageSrc: taVivoImage,
-      url: "https://landing-tavivo.albert.do",
+      url: "https://landing.tavivo.do",
     },
     {
       title: "Cowofi",
@@ -104,6 +104,12 @@ export default {
       url: "https://github.com/itsalb3rt/agile-visitors"
     },
     {
+      title: 'AMV Restoration',
+      para: 'Expert Solutions for Water Damage, Mold Remediation, Sewage Clean-Up, and Construction Projects.',
+      imageSrc: 'https://amvrestoration.com/img/logo.png',
+      url: 'https://amvrestoration.com'
+    },
+    {
       title: "More", //Project Title - Add Your Project Title Here
       para:
         "Explore all my open source projects.", // Add Your Service Type Here
@@ -112,17 +118,6 @@ export default {
       //Project URL - Add Your Project Url Here
       url: "https://github.com/itsalb3rt",
     },
-
-    /*
-    If You Want To Add More Project just Copy and Paste This At The End (Update the id Respectively)
-    ,{
-        id: 5,
-        title: 'Project Five',
-        para: 'Something Amazing',
-        imageSrc: "",
-        url: ''
-    }
-    */
   ],
 
   // End Work Section -----------------------

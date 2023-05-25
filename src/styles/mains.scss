@@ -13,6 +13,8 @@
 @import "./skills.scss";
 @import "./promotion.scss";
 @import "./footer.scss";
+@import "./form.scss";
+@import "./spinner.scss";
 
 * {
   font-family: "Montserrat";
@@ -52,4 +54,27 @@ body {
   &:hover {
     transform: scale(1.1);
   }
+}
+
+.success-banner {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  margin: 20px auto;
+}
+
+.success-banner p {
+  margin: 0;
+}
+
+.success-icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.success-message {
+  display: inline-block;
+  vertical-align: middle;
 }

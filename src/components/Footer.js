@@ -1,6 +1,7 @@
 import React from "react"
 import Fade from "react-reveal/Fade"
 import data from "../yourdata"
+import ContactForm from "./ContactForm"
 
 const Footer = () => {
   return (
@@ -25,9 +26,10 @@ const Footer = () => {
         
         <div className="footer-container">
           <Fade bottom cascade>
-            <h1>Contact</h1>
+            <h1 id="contact">Contact</h1>
             <h2>{data.contactSubHeading}</h2>
           </Fade>
+          <ContactForm />
           <a className="email-link" href={`mailto:${data.contactEmail}`}>
             {data.contactEmail}
           </a>

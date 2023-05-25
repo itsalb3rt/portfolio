@@ -8,6 +8,8 @@
     "node": "=14.18.1"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
+    "dotenv": "^16.0.3",
     "gatsby": "^2.26.1",
     "gatsby-image": "^2.5.0",
     "gatsby-plugin-manifest": "^2.6.1",
@@ -24,7 +26,7 @@
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0",
     "react-reveal": "^1.2.2",
-    "react-scroll": "^1.8.1"
+    "react-scroll": "^1.8.9"
   },
   "devDependencies": {
     "prettier": "2.1.2"

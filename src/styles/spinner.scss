@@ -1,0 +1,45 @@
+.spinner {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+}
+
+.spinner span {
+  position: absolute;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  animation: spinnerAnimation 1.2s linear infinite;
+}
+
+.spinner span:nth-child(1) {
+  left: 0;
+  animation-delay: -0.3s;
+}
+
+.spinner span:nth-child(2) {
+  left: 15px;
+  animation-delay: -0.15s;
+}
+
+.spinner span:nth-child(3) {
+  left: 30px;
+  animation-delay: 0s;
+}
+
+@keyframes spinnerAnimation {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

@@ -152,7 +152,7 @@ export default {
     {
       img: dockerIcon,
       para:
-        "Extensive professional experience with Docker, traefik and more. Technical studies at Platzi.",
+        "Extensive professional experience with Docker, traefik and more.",
     },
     {
       img: vueIcon,
@@ -162,12 +162,12 @@ export default {
     {
       img: reactIcon,
       para:
-        "Professional experience working with React, redux, redux form and many more tools of the react ecosystem.",
+        "Professional experience working with React, redux, NextJS, and many more tools of the react ecosystem.",
     },
     {
       img: designIcon,
       para:
-        "Knowledge of graphic interface design and user experience, prototyping with Adobe XD.",
+        "Knowledge of graphic interface design and user experience, prototyping with Figma.",
     }
   ],
 

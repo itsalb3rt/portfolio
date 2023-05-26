@@ -19,7 +19,7 @@ const ContactForm = () => {
       message
     };
 
-    emailjs.send('service_22tltyn', 'template_sqi7i7w', templateParams, '-qFHvZCxvKML4Pcwg')
+    emailjs.send('service_22tltyn', 'template_wt3snog', templateParams, '-qFHvZCxvKML4Pcwg')
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text);
         setSuccess(true);

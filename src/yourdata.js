@@ -13,7 +13,7 @@ import twitterIcon from "./images/twitter.png"
 
 // Work images
 import bohiosImage from './images/bohios.png'
-import sheileyShopImage from './images/sheiley-shop.png'
+import savyCartImage from './images/savycart.png'
 import aftermanImage from './images/afterman.png'
 import cloudCsvimage from './images/cloudcsv.png'
 import agileVisitorsImage from './images/agile-visitors.png'
@@ -68,13 +68,11 @@ export default {
       url: "https://play.google.com/store/apps/details?id=com.bohios.bohios",
     },
     {
-      title: "Sheiley Shop", //Project Title - Add Your Project Title Here
+      title: "SavyCart",
       para:
-        "Sheiley Shop is a PWA to track personal purchases, No more paper and pencil to go to the supermarket.", // Add Your Service Type Here
-      //Project Image - Add Your Project Image Here
-      imageSrc: sheileyShopImage,
-      //Project URL - Add Your Project Url Here
-      url: "https://github.com/itsalb3rt/sheiley_shop_app",
+        "Create the grocery list and carry it in your pocket. no more pencil and paper.",
+      imageSrc: savyCartImage,
+      url: "https://savycart.albert.do",
     },
     {
       title: "Afterman", //Project Title - Add Your Project Title Here

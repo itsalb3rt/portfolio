@@ -12,6 +12,7 @@ import instagramIcon from "./images/instagram.svg"
 import twitterIcon from "./images/twitter.png"
 
 // Work images
+import mutusImage from './images/mutus.jpg'
 import bohiosImage from './images/bohios.png'
 import savyCartImage from './images/savycart.png'
 import aftermanImage from './images/afterman.png'
@@ -46,6 +47,12 @@ export default {
 
   // Work Section ------------------------
   projects: [
+    {
+      title: "MUTUS",
+      para: "All in one Fitness FREE App.",
+      imageSrc: mutusImage,
+      url: "https://mutus.app",
+    },
     {
       title: "Ta vivo",
       para: "Check if your service is down before your customers. Get notification via Discord, Email, Slack, Telegram or WhatsApp.",

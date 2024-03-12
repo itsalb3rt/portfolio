@@ -21,6 +21,7 @@ import agileVisitorsImage from './images/agile-visitors.png'
 import moreProjectsImage from './images/more-projects.png'
 import taVivoImage from './images/taVivo.png'
 import cowofiImage from './images/cowofi.png'
+import laCasitaDeCharo from './images/la-casita-de-charo.png'
 
 export default {
   //(Please Do Not Remove The comma(,) after every variable)
@@ -72,7 +73,7 @@ export default {
       //Project Image - Add Your Project Image Here
       imageSrc: bohiosImage,
       //Project URL - Add Your Project Url Here
-      url: "https://play.google.com/store/apps/details?id=com.bohios.bohios",
+      url: "https://bohio-landing.netlify.app",
     },
     {
       title: "SavyCart",
@@ -113,6 +114,12 @@ export default {
       para: 'Expert Solutions for Water Damage, Mold Remediation, Sewage Clean-Up, and Construction Projects.',
       imageSrc: 'https://amvrestoration.com/img/logo.png',
       url: 'https://amvrestoration.com'
+    },
+    {
+      title: 'La Casita de Charo',
+      para: 'Villas landing page located in the city of Constanza, Dominican Republic.',
+      imageSrc: laCasitaDeCharo,
+      url: 'https://lacasitadecharo.com'
     },
     {
       title: "More", //Project Title - Add Your Project Title Here

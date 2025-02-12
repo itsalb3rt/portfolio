@@ -58,7 +58,7 @@ export default {
       title: "Ta vivo",
       para: "Check if your service is down before your customers. Get notification via Discord, Email, Slack, Telegram or WhatsApp.",
       imageSrc: taVivoImage,
-      url: "https://landing.tavivo.do",
+      url: "https://landing-tavivo.albert.do",
     },
     {
       title: "Cowofi",

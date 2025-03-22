@@ -4,7 +4,7 @@ const Card = ({ heading, paragraph, imgUrl, projectLink }) => {
   return (
     <div
       className="card"
-      style={{ backgroundImage: `url("${imgUrl}")` }}
+      style={{ backgroundImage: `url("${imgUrl}")`, border: "1px solid rgba(0, 0, 0, 0.1)" }}
     >
       <div className="content">
         <h1 className="header">{heading}</h1>

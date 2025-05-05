@@ -63,6 +63,12 @@ export default {
       url:'https://reorei.com'
     },
     {
+      title: 'GT Consulting store',
+      para: 'GT Consulting e-commerce store.',
+      imageSrc: 'https://tienda.gtconsultingonline.com/assets/logo/logo.png',
+      url: 'https://tienda.gtconsultingonline.com'
+    },
+    {
       title: "Ta vivo",
       para: "Check if your service is down before your customers. Get notification via Discord, Email, Slack, Telegram or WhatsApp.",
       imageSrc: taVivoImage,

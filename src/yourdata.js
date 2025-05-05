@@ -24,6 +24,7 @@ import cowofiImage from './images/cowofi.png'
 import laCasitaDeCharo from './images/la-casita-de-charo.png'
 import reorei from './images/reorei.png'
 import zenith from './images/zenith.png'
+import gtc from './images/gtc.png'
 
 export default {
   //(Please Do Not Remove The comma(,) after every variable)
@@ -65,7 +66,7 @@ export default {
     {
       title: 'GT Consulting store',
       para: 'GT Consulting e-commerce store.',
-      imageSrc: 'https://tienda.gtconsultingonline.com/assets/logo/logo.png',
+      imageSrc: gtc,
       url: 'https://tienda.gtconsultingonline.com'
     },
     {

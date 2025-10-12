@@ -3,8 +3,18 @@ import scrollTo from "gatsby-plugin-smoothscroll"
 import externalLinkIcon from "../images/external-link.png"
 
 const Navbar = () => {
+  const [isScrolled, setIsScrolled] = React.useState(false);
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <div className="section">
+    <div className={`section navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container">
         <div className="navbar-wrapper">
           <div

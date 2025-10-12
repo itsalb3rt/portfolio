@@ -80,7 +80,7 @@ const ContactForm = () => {
         </div>
         <div style={{ textAlign: 'center' }}>
           <button
-            style={{ textAlign: 'center', minWidth: '116px', maxHeight: '36px' }}
+            style={{ textAlign: 'center', minWidth: '116px', maxHeight: '46px' }}
             className="primary-btn"
             disabled={loading}
             type="submit"

@@ -8,7 +8,7 @@ import designIcon from "./images/design.svg"
 
 // Social Icon
 import githubIcon from "./images/github.svg"
-import instagramIcon from "./images/instagram.svg"
+import linkedinIcon from "./images/linkedin.svg"
 import twitterIcon from "./images/twitter.png"
 
 // Work images
@@ -224,8 +224,8 @@ export default {
       url: "https://twitter.com/alhidalgodev",
     },
     {
-      img: instagramIcon,
-      url: "https://www.instagram.com/itsalb3rt/",
+      img: linkedinIcon,
+      url: "https://www.linkedin.com/in/alhidalgodev",
     },
   ],
 

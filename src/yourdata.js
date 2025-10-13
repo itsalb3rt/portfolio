@@ -83,6 +83,12 @@ export default {
       url: 'https://app.anncarequipment.com'
     },
     {
+      title: 'La Casita de Charo',
+      para: 'Villas landing page located in the city of Constanza, Dominican Republic.',
+      imageSrc: laCasitaDeCharo,
+      url: 'https://lacasitadecharo.com'
+    },
+    {
       title: "Ta vivo",
       para: "Check if your service is down before your customers. Get notification via Discord, Email, Slack, Telegram or WhatsApp.",
       imageSrc: taVivoImage,
@@ -142,12 +148,6 @@ export default {
       para: 'Expert Solutions for Water Damage, Mold Remediation, Sewage Clean-Up, and Construction Projects.',
       imageSrc: 'https://amvrestoration.com/img/logo.png',
       url: 'https://amvrestoration.com'
-    },
-    {
-      title: 'La Casita de Charo',
-      para: 'Villas landing page located in the city of Constanza, Dominican Republic.',
-      imageSrc: laCasitaDeCharo,
-      url: 'https://lacasitadecharo.com'
     },
     {
       title: "More", //Project Title - Add Your Project Title Here

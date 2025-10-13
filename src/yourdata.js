@@ -24,6 +24,7 @@ import cowofiImage from './images/cowofi.png'
 import laCasitaDeCharo from './images/la-casita-de-charo.png'
 import reorei from './images/reorei.png'
 import zenith from './images/zenith.png'
+import anncar from './images/anncar.jpeg'
 import gtc from './images/gtc.png'
 
 export default {
@@ -70,6 +71,18 @@ export default {
       url: 'https://tienda.gtconsultingonline.com'
     },
     {
+      title: 'Zenith Residential Properties LLC',
+      para: 'Real Estate Investment and Property Management Company.',
+      imageSrc: zenith,
+      url: 'https://www.zenithresidentialproperties.com'
+    },
+    {
+      title: 'Anncar Equipment Parts',
+      para: 'We offer a vast selection of new aftermarket, rebuilt and used parts for Caterpillar®, Komatsu®, JCB® and other popular heavy equipment manufacturers.',
+      imageSrc: anncar,
+      url: 'https://app.anncarequipment.com'
+    },
+    {
       title: "Ta vivo",
       para: "Check if your service is down before your customers. Get notification via Discord, Email, Slack, Telegram or WhatsApp.",
       imageSrc: taVivoImage,
@@ -96,12 +109,6 @@ export default {
         "Create the grocery list and carry it in your pocket. no more pencil and paper.",
       imageSrc: savyCartImage,
       url: "https://savycart.albert.do",
-    },
-    {
-      title: 'Zenith Residential Properties LLC',
-      para: 'Real Estate Investment and Property Management Company.',
-      imageSrc: zenith,
-      url: 'https://www.zenithresidentialproperties.com'
     },
     {
       title: "Afterman", //Project Title - Add Your Project Title Here

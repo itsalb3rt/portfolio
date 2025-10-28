@@ -5,6 +5,7 @@ import nodejsLogo from "./images/nodejs.png"
 import reactIcon from "./images/react.svg"
 import jsIcon from "./images/js.png"
 import designIcon from "./images/design.svg"
+import n8nIcon from "./images/n8n.webp"
 
 // Social Icon
 import githubIcon from "./images/github.svg"
@@ -208,6 +209,11 @@ export default {
       img: designIcon,
       para:
         "Knowledge of graphic interface design and user experience, prototyping with Figma.",
+    },
+    {
+      img: n8nIcon,
+      para:
+        "Expert in workflow automation with n8n: email processing, Telegram business communication, WhatsApp AI agents, and custom automation solutions.",
     }
   ],
 

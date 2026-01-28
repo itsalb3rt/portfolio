@@ -27,6 +27,7 @@ import reorei from './images/reorei.png'
 import zenith from './images/zenith.png'
 import anncar from './images/anncar.jpeg'
 import gtc from './images/gtc.png'
+import reinapp from './images/reinapp.webp'
 
 export default {
   //(Please Do Not Remove The comma(,) after every variable)
@@ -64,6 +65,12 @@ export default {
       para: 'Streamline your Investment process: AI Real Estate Analysis',
       imageSrc: reorei,
       url:'https://reorei.com'
+    },
+    {
+      title: 'ReinAPP',
+      para: 'Connecting entrepreneurs with customers',
+      imageSrc: reinapp,
+      url: 'https://reinapp.com.do'
     },
     {
       title: 'GT Consulting store',

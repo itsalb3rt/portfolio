@@ -13,27 +13,90 @@
     font-size: 3rem;
     line-height: 20px;
   }
+
+  .work-intro {
+    text-align: center;
+    max-width: 560px;
+    margin: 0.8rem 0 1.6rem;
+    color: #555;
+    line-height: 1.5;
+    font-size: 0.98rem;
+  }
+
   .grid {
     display: grid;
-    margin-top: 20px;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
+    width: 100%;
+    margin-top: 8px;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 12px;
+
+    .card {
+      min-height: 260px;
+      grid-column: span 4;
+
+      .content {
+        opacity: 0;
+        transform: translateY(16px);
+      }
+
+      &:hover .content {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .card--featured {
+      min-height: 360px;
+      grid-column: span 8;
+    }
+
+    .card--wide {
+      grid-column: span 6;
+    }
+
     @include bp.phone {
       grid-template-columns: 1fr;
+
+      .card,
+      .card--featured,
+      .card--wide {
+        min-height: 250px;
+        grid-column: span 1;
+      }
+
+      .card .content {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
+
     @include bp.lgphone {
       grid-template-columns: 1fr;
+
+      .card,
+      .card--featured,
+      .card--wide {
+        min-height: 250px;
+        grid-column: span 1;
+      }
+
+      .card .content {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
+
     @include bp.tablet {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(8, minmax(0, 1fr));
+
+      .card {
+        grid-column: span 4;
+      }
+
+      .card--featured,
+      .card--wide {
+        grid-column: span 8;
+      }
     }
   }
-}
-
-.project-container .text,
-.project-container .header {
-  background-color: black;
-  color: white;
-  border-radius: 4px;
-  padding: 4px;
 }

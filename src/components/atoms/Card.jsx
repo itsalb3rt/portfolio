@@ -1,6 +1,7 @@
 import React from "react"
 
 const Card = ({
+  className = "",
   heading,
   paragraph,
   imgUrl,
@@ -11,7 +12,7 @@ const Card = ({
   const hasProjectLink = Boolean(projectLink)
 
   return (
-    <article className="card" style={{ border: "1px solid rgba(0, 0, 0, 0.1)" }}>
+    <article className={`card ${className}`} style={{ border: "1px solid rgba(0, 0, 0, 0.1)" }}>
       <img
         className="card-image"
         src={imgUrl}

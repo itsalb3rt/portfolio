@@ -1,5 +1,17 @@
 @use "./breakpoints" as bp;
 
+#home {
+  padding-top: 5.5rem;
+
+  @include bp.phone {
+    padding-top: 7.5rem;
+  }
+
+  @include bp.lgphone {
+    padding-top: 7rem;
+  }
+}
+
 .header-wrapper {
   width: 90vw;
   max-width: 1024px;
@@ -11,13 +23,13 @@
   position: relative;
   
   @include bp.phone {
-    margin-top: 8vh;
+    margin-top: 2vh;
     padding: 1rem 0;
     width: 95vw;
   }
   
   @include bp.lgphone {
-    margin-top: 10vh;
+    margin-top: 3vh;
     padding: 1.5rem 0;
     width: 90vw;
   }

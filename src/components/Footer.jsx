@@ -18,7 +18,12 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src={sponsor.img} alt={sponsor.name || `Sponsor ${index + 1}`}></img>
+                <img
+                  src={sponsor.img}
+                  alt={sponsor.name || `Sponsor ${index + 1}`}
+                  loading="lazy"
+                  decoding="async"
+                ></img>
               </a>
             ))}
           </div>
@@ -40,8 +45,9 @@ const Footer = () => {
                 href={socialLink.url}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={socialLink.name}
               >
-                <img src={socialLink.img} alt={`Social profile ${index + 1}`}></img>
+                <img src={socialLink.img} alt={socialLink.name} loading="lazy" decoding="async"></img>
               </a>
             ))}
           </div>

@@ -14,6 +14,18 @@ function SEO({ description, lang, meta, title, pathname, image }) {
   const defaultTitle = site?.title
   const canonicalUrl = `${site.siteUrl}${pathname || ""}`
   const seoImage = image || `${site.siteUrl}${site.defaultImage}`
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: site.title,
+    url: site.siteUrl,
+    description: metaDescription,
+    sameAs: [
+      "https://github.com/itsalb3rt",
+      "https://www.linkedin.com/in/alhidalgodev",
+      "https://twitter.com/alhidalgodev",
+    ],
+  }
 
   return (
     <Helmet
@@ -56,6 +68,14 @@ function SEO({ description, lang, meta, title, pathname, image }) {
           content: seoImage,
         },
         {
+          property: `og:image:width`,
+          content: `1200`,
+        },
+        {
+          property: `og:image:height`,
+          content: `630`,
+        },
+        {
           name: `twitter:card`,
           content: `summary_large_image`,
         },
@@ -86,7 +106,9 @@ function SEO({ description, lang, meta, title, pathname, image }) {
           href: canonicalUrl,
         },
       ]}
-    />
+    >
+      <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
+    </Helmet>
   )
 }
 

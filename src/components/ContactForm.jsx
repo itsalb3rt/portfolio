@@ -10,9 +10,9 @@ const ContactForm = () => {
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState('');
 
-  const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_22tltyn';
-  const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_wt3snog';
-  const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || '-qFHvZCxvKML4Pcwg';
+  const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+  const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+  const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -20,6 +20,11 @@ const ContactForm = () => {
 
     if (!name.trim() || !email.trim() || !message.trim()) {
       setError('Please complete all required fields.');
+      return;
+    }
+
+    if (!serviceId || !templateId || !publicKey) {
+      setError('Contact form is not configured yet. Please email us directly.');
       return;
     }
 
@@ -32,11 +37,9 @@ const ContactForm = () => {
     };
 
     emailjs.send(serviceId, templateId, templateParams, publicKey)
-      .then((response) => {
-        console.log('SUCCESS!', response.status, response.text);
+      .then(() => {
         setSuccess(true);
-      }, (err) => {
-        console.log('FAILED...', err);
+      }, () => {
         setError('Unable to send your message right now. Please try again in a moment.');
       })
       .finally(() => {

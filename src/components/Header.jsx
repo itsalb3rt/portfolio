@@ -1,7 +1,6 @@
 import React from "react"
 import Fade from "react-reveal/Fade"
 import data from "../yourdata"
-import { Link } from 'react-scroll'
 
 const Header = () => {
 
@@ -42,14 +41,9 @@ const Header = () => {
             <p>{data.headerParagraph}</p>
           </Fade>
           <Fade bottom>
-            <Link
-              offset={70}
-              to="contact"
-              smooth={true}
-              duration={1000}
-            >
-              <button className="primary-btn">CONNECT WITH ME</button>
-            </Link>
+            <a className="primary-btn" href="#contact">
+              CONNECT WITH ME
+            </a>
           </Fade>
         </div>
       </div>

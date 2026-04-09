@@ -238,14 +238,16 @@ export default {
   contactSubHeading: "Let's create your next experience together",
   social: [
     // Add Or Remove The Link Accordingly
-    { img: githubIcon, url: "https://github.com/itsalb3rt" },
+    { img: githubIcon, url: "https://github.com/itsalb3rt", name: "GitHub" },
     {
       img: twitterIcon,
       url: "https://twitter.com/alhidalgodev",
+      name: "Twitter/X",
     },
     {
       img: linkedinIcon,
       url: "https://www.linkedin.com/in/alhidalgodev",
+      name: "LinkedIn",
     },
   ],
 

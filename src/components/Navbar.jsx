@@ -14,6 +14,11 @@ const Navbar = () => {
     })
   }
 
+  const handleNavClick = (event, sectionName) => {
+    event.preventDefault()
+    smoothScrollTo(sectionName)
+  }
+
   React.useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50)
@@ -28,27 +33,20 @@ const Navbar = () => {
     <div className={`section navbar ${isScrolled ? "scrolled" : ""}`}>
       <div className="container">
         <div className="navbar-wrapper">
-          <div
-            role="button"
+          <a
+            href="#home"
             className="name"
-            tabIndex={0}
-            onClick={() => smoothScrollTo("home")}
-            onKeyDown={(event) => {
-              if (event.key === "Enter" || event.key === " ") {
-                event.preventDefault()
-                smoothScrollTo("home")
-              }
-            }}
+            onClick={(event) => handleNavClick(event, "home")}
           >
             Portfolio.
-          </div>
+          </a>
           <div className="links-wrapper">
-            <button onClick={() => smoothScrollTo("work")}>Work</button>
-            <button onClick={() => smoothScrollTo("about")}>About</button>
-            <button onClick={() => smoothScrollTo("contact")}>Contact</button>
-            <button onClick={() => (window.location.href = "https://blog.albert.do")}>
+            <a href="#work" onClick={(event) => handleNavClick(event, "work")}>Work</a>
+            <a href="#about" onClick={(event) => handleNavClick(event, "about")}>About</a>
+            <a href="#contact" onClick={(event) => handleNavClick(event, "contact")}>Contact</a>
+            <a href="https://blog.albert.do" target="_blank" rel="noopener noreferrer">
               Blog <img style={{ width: 10 }} src={externalLinkIcon} alt="Open blog" />
-            </button>
+            </a>
           </div>
         </div>
       </div>

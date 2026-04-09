@@ -29,9 +29,9 @@
     right: -100px;
     width: 200px;
     height: 200px;
-    background: linear-gradient(45deg, #f3ec78, #af4261);
+    background: radial-gradient(circle at center, rgba(243, 236, 120, 0.35), rgba(175, 66, 97, 0.15));
     border-radius: 50%;
-    filter: blur(80px);
+    filter: blur(32px);
     opacity: 0.2;
     z-index: -1;
     

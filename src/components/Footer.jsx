@@ -1,5 +1,4 @@
 import React from "react"
-import Fade from "react-reveal/Fade"
 import data from "../yourdata"
 import ContactForm from "./ContactForm"
 
@@ -30,10 +29,8 @@ const Footer = () => {
         </div>
         
         <div className="footer-container">
-          <Fade bottom cascade>
-            <h1 id="contact">Contact</h1>
-            <h2>{data.contactSubHeading}</h2>
-          </Fade>
+          <h1 id="contact">Contact</h1>
+          <h2>{data.contactSubHeading}</h2>
           <ContactForm />
           <a className="email-link" href={`mailto:${data.contactEmail}`}>
             {data.contactEmail}
@@ -47,7 +44,15 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 aria-label={socialLink.name}
               >
-                <img src={socialLink.img} alt={socialLink.name} loading="lazy" decoding="async"></img>
+                <img
+                  src={socialLink.img}
+                  alt={socialLink.name}
+                  loading="lazy"
+                  fetchPriority="low"
+                  decoding="async"
+                  width="32"
+                  height="32"
+                ></img>
               </a>
             ))}
           </div>

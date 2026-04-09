@@ -31,6 +31,13 @@
   }
   .social-icons {
     margin-top: 20px;
+    a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 48px;
+      min-height: 48px;
+    }
     img {
       height: 2rem;
       margin: 10px;

@@ -1,6 +1,13 @@
 import React from "react"
 
-const Card = ({ heading, paragraph, imgUrl, projectLink, loading = "lazy" }) => {
+const Card = ({
+  heading,
+  paragraph,
+  imgUrl,
+  projectLink,
+  loading = "lazy",
+  fetchPriority = "auto",
+}) => {
   const hasProjectLink = Boolean(projectLink)
 
   return (
@@ -10,6 +17,7 @@ const Card = ({ heading, paragraph, imgUrl, projectLink, loading = "lazy" }) => 
         src={imgUrl}
         alt={`${heading} preview`}
         loading={loading}
+        fetchPriority={fetchPriority}
         decoding="async"
         width="640"
         height="360"

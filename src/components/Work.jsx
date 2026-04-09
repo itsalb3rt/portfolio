@@ -1,6 +1,5 @@
 import React from "react"
 import Card from "./atoms/Card"
-import Fade from "react-reveal/Fade"
 
 import data from "../yourdata"
 
@@ -9,23 +8,20 @@ const Work = () => {
     <div className="section" id="work">
       <div className="container">
         <div className="work-wrapper">
-          <Fade bottom>
-            <h1>Work</h1>
-          </Fade>
+          <h1>Work</h1>
 
           <div className="grid project-container">
-            <Fade bottom cascade>
-              {data.projects.map((project, index) => (
-                <Card
-                  key={`project-${index}`}
-                  heading={project.title}
-                  paragraph={project.para}
-                  imgUrl={project.imageSrc}
-                  projectLink={project.url}
-                  loading={index < 2 ? "eager" : "lazy"}
-                ></Card>
-              ))}
-            </Fade>
+            {data.projects.map((project, index) => (
+              <Card
+                key={`project-${index}`}
+                heading={project.title}
+                paragraph={project.para}
+                imgUrl={project.imageSrc}
+                projectLink={project.url}
+                loading={index === 0 ? "eager" : "lazy"}
+                fetchPriority={index === 0 ? "high" : "auto"}
+              ></Card>
+            ))}
           </div>
         </div>
       </div>

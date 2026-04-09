@@ -29,6 +29,8 @@
     a {
       display: inline-flex;
       align-items: center;
+      justify-content: center;
+      min-height: 48px;
       gap: 0.35rem;
       text-decoration: none;
       padding: 8px 16px;

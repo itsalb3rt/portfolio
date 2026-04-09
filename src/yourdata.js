@@ -13,9 +13,9 @@ import linkedinIcon from "./images/linkedin.svg"
 import twitterIcon from "./images/twitter.png"
 
 // Work images
-import mutusImage from './images/mutus.jpg'
+import mutusImage from './images/mutus.webp'
 import bohiosImage from './images/bohios.png'
-import savyCartImage from './images/savycart.png'
+import savyCartImage from './images/savycart.webp'
 import aftermanImage from './images/afterman.png'
 import cloudCsvimage from './images/cloudcsv.png'
 import agileVisitorsImage from './images/agile-visitors.png'

@@ -1,3 +1,5 @@
+@use "./breakpoints" as bp;
+
 .footer-container {
   width: 80vw;
   max-width: 1024px;
@@ -13,13 +15,13 @@
   h2 {
     font-size: 1.5rem;
     overflow: hidden;
-    @include media(">=phone", "<lgphone") {
+    @include bp.phone {
       display: none;
     }
-    @include media(">=lgphone", "<tablet") {
+    @include bp.lgphone {
       font-size: 14px;
     }
-    @include media(">=tablet", "<desktop") {
+    @include bp.tablet {
       font-size: 1.2rem;
     }
   }

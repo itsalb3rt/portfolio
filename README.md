@@ -29,7 +29,7 @@ If you created something awesome and want to contribute then feel free to open a
 
 ## How To Use 
 
-From your command line, clone and run react-portfolio-template:
+From your command line, clone and run the portfolio:
 
 ```bash
 # Clone this repository
@@ -39,13 +39,19 @@ $ git clone https://github.com/itsalb3rt/portfolio
 $ cd portfolio
 
 # Install dependencies
-$ yarn
+$ npm install
 
-#Start's development server
-$ yarn develop
+# Start development server
+$ npm run dev
+
+# Build production bundle
+$ npm run build
+
+# Preview production build
+$ npm run preview
 ```
 
-#### Personalize page content in `/src/yourdata.js` & modify it as per your need.
+#### Personalize page content in `/src/yourdata.js` and keep your real project data there.
 
 ```javascript
 /* Change this file to get your Personal Porfolio */
@@ -74,7 +80,7 @@ For more information, read [hosting on Netlify](https://create-react-app.dev/doc
 ## Technologies Used 
 
 - [React](https://reactjs.org/)
-- [Gatsby](https://www.gatsbyjs.com/)
+- [Vite](https://vite.dev/)
 
 
 

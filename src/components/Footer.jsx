@@ -18,7 +18,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src={sponsor.img} alt="sponsor"></img>
+                <img src={sponsor.img} alt={sponsor.name || `Sponsor ${index + 1}`}></img>
               </a>
             ))}
           </div>
@@ -41,7 +41,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src={socialLink.img} alt="icons"></img>
+                <img src={socialLink.img} alt={`Social profile ${index + 1}`}></img>
               </a>
             ))}
           </div>

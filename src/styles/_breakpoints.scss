@@ -1,0 +1,28 @@
+$bp-phone: 320px;
+$bp-lgphone: 425px;
+$bp-tablet: 768px;
+$bp-desktop: 1024px;
+
+@mixin between($min, $max) {
+  @media (min-width: $min) and (max-width: ($max - 1px)) {
+    @content;
+  }
+}
+
+@mixin phone {
+  @include between($bp-phone, $bp-lgphone) {
+    @content;
+  }
+}
+
+@mixin lgphone {
+  @include between($bp-lgphone, $bp-tablet) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @include between($bp-tablet, $bp-desktop) {
+    @content;
+  }
+}

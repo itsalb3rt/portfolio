@@ -1,3 +1,5 @@
+@use "./breakpoints" as bp;
+
 .skills-container {
   width: 80vw;
   max-width: 1024px;
@@ -28,13 +30,13 @@
     grid-template-columns: repeat(3, 1fr);
     margin-top: 50px;
     grid-gap: 20px;
-    @include media(">=phone", "<lgphone") {
+    @include bp.phone {
       grid-template-columns: 1fr;
     }
-    @include media(">=lgphone", "<tablet") {
+    @include bp.lgphone {
       grid-template-columns: 1fr;
     }
-    @include media(">=tablet", "<desktop") {
+    @include bp.tablet {
       grid-template-columns: 1fr 1fr;
     }
     .skill {

@@ -1,40 +1,42 @@
+@use "./breakpoints" as bp;
+
 .about-section {
   width: 80vw;
   max-width: 1024px;
   margin-top: 10vh;
   display: flex;
   justify-content: space-between;
-  @include media(">=phone", "<lgphone") {
+  @include bp.phone {
     flex-direction: column-reverse;
   }
-  @include media(">=lgphone", "<tablet") {
+  @include bp.lgphone {
     flex-direction: column-reverse;
   }
-  @include media(">=tablet", "<desktop") {
+  @include bp.tablet {
     flex-direction: column-reverse;
     align-items: center;
   }
   .content {
     width: 50%;
-    @include media(">=phone", "<lgphone") {
+    @include bp.phone {
       width: 100%;
     }
-    @include media(">=lgphone", "<tablet") {
+    @include bp.lgphone {
       width: 100%;
     }
-    @include media(">=tablet", "<desktop") {
+    @include bp.tablet {
       width: 100%;
     }
 
     h1 {
       font-size: 3rem;
       line-height: 20px;
-      @include media(">=tablet", "<desktop") {
+      @include bp.tablet {
         text-align: center;
       }
     }
     p {
-      @include media(">=tablet", "<desktop") {
+      @include bp.tablet {
         text-align: center;
       }
     }
@@ -45,13 +47,13 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    @include media(">=phone", "<lgphone") {
+    @include bp.phone {
       width: 100%;
     }
-    @include media(">=lgphone", "<tablet") {
+    @include bp.lgphone {
       width: 100%;
     }
-    @include media(">=tablet", "<desktop") {
+    @include bp.tablet {
       width: 100%;
     }
   }

@@ -1,3 +1,5 @@
+@use "./breakpoints" as bp;
+
 .work-wrapper {
   width: 80vw;
   max-width: 1024px;
@@ -16,13 +18,13 @@
     margin-top: 20px;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
-    @include media(">=phone", "<lgphone") {
+    @include bp.phone {
       grid-template-columns: 1fr;
     }
-    @include media(">=lgphone", "<tablet") {
+    @include bp.lgphone {
       grid-template-columns: 1fr;
     }
-    @include media(">=tablet", "<desktop") {
+    @include bp.tablet {
       grid-template-columns: 1fr 1fr;
     }
   }

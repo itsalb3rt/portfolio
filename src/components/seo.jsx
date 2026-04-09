@@ -1,31 +1,19 @@
 /**
- * SEO component that queries for data with
- *  Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
+ * SEO metadata component for Vite + React.
  */
 
 import React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
-function SEO({ description, lang, meta, title }) {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
-          }
-        }
-      }
-    `
-  )
+import siteMetadata from "../config/siteMetadata"
 
-  const metaDescription = description || site.siteMetadata.description
-  const defaultTitle = site.siteMetadata?.title
+function SEO({ description, lang, meta, title, pathname, image }) {
+  const site = siteMetadata
+
+  const metaDescription = description || site.description
+  const defaultTitle = site?.title
+  const canonicalUrl = `${site.siteUrl}${pathname || ""}`
+  const seoImage = image || `${site.siteUrl}${site.defaultImage}`
 
   return (
     <Helmet
@@ -40,6 +28,10 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
         {
+          name: `robots`,
+          content: `index, follow`,
+        },
+        {
           property: `og:title`,
           content: title,
         },
@@ -52,12 +44,24 @@ function SEO({ description, lang, meta, title }) {
           content: `website`,
         },
         {
+          property: `og:url`,
+          content: canonicalUrl,
+        },
+        {
+          property: `og:site_name`,
+          content: site.title,
+        },
+        {
+          property: `og:image`,
+          content: seoImage,
+        },
+        {
           name: `twitter:card`,
-          content: `summary`,
+          content: `summary_large_image`,
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata?.author || ``,
+          content: site?.author || ``,
         },
         {
           name: `twitter:title`,
@@ -67,7 +71,21 @@ function SEO({ description, lang, meta, title }) {
           name: `twitter:description`,
           content: metaDescription,
         },
+        {
+          name: `twitter:image`,
+          content: seoImage,
+        },
+        {
+          name: `theme-color`,
+          content: `#111111`,
+        },
       ].concat(meta)}
+      link={[
+        {
+          rel: `canonical`,
+          href: canonicalUrl,
+        },
+      ]}
     />
   )
 }
@@ -76,12 +94,16 @@ SEO.defaultProps = {
   lang: `en`,
   meta: [],
   description: ``,
+  pathname: `/`,
+  image: ``,
 }
 
 SEO.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
+  pathname: PropTypes.string,
+  image: PropTypes.string,
   title: PropTypes.string.isRequired,
 }
 

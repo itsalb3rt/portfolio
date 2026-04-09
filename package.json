@@ -1,26 +1,14 @@
 {
   "name": "react-portfolio-template",
   "private": true,
-  "description": "Portfolio Template For Awesome Peoples",
+  "description": "Portfolio site for Albert Hidalgo",
   "version": "0.1.0",
   "author": "Chetan Verma <hello@chetanverma.com>",
   "engines": {
-    "node": "=14.18.1"
+    "node": ">=18.0.0"
   },
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
-    "dotenv": "^16.0.3",
-    "gatsby": "^2.26.1",
-    "gatsby-image": "^2.5.0",
-    "gatsby-plugin-manifest": "^2.6.1",
-    "gatsby-plugin-offline": "^3.4.0",
-    "gatsby-plugin-react-helmet": "^3.4.0",
-    "gatsby-plugin-sass": "^2.6.0",
-    "gatsby-plugin-sharp": "^2.8.0",
-    "gatsby-plugin-smoothscroll": "^1.2.0",
-    "gatsby-source-filesystem": "^2.5.0",
-    "gatsby-transformer-sharp": "^2.6.0",
-    "node-sass": "4.14.1",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
@@ -29,26 +17,31 @@
     "react-scroll": "^1.8.9"
   },
   "devDependencies": {
-    "prettier": "2.1.2"
+    "@vitejs/plugin-react": "^4.4.1",
+    "prettier": "2.1.2",
+    "sass": "^1.86.3",
+    "vite": "^5.4.18"
   },
   "keywords": [
-    "gatsby"
+    "portfolio",
+    "vite",
+    "react"
   ],
   "license": "0BSD",
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
+    "build": "vite build",
+    "dev": "vite",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "start": "npm run dev",
+    "preview": "vite preview",
+    "clean": "rm -rf dist .vite",
+    "test": "echo \"No tests configured yet\" && exit 0"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/itsalb3rt/portfolio"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/itsalb3rt/portfolio/issues"
   }
 }

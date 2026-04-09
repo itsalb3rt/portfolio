@@ -1,3 +1,5 @@
+@use "./breakpoints" as bp;
+
 .header-wrapper {
   width: 90vw;
   max-width: 1024px;
@@ -8,13 +10,13 @@
   align-items: center;
   position: relative;
   
-  @include media(">=phone", "<lgphone") {
+  @include bp.phone {
     margin-top: 8vh;
     padding: 1rem 0;
     width: 95vw;
   }
   
-  @include media(">=lgphone", "<tablet") {
+  @include bp.lgphone {
     margin-top: 10vh;
     padding: 1.5rem 0;
     width: 90vw;
@@ -33,14 +35,14 @@
     opacity: 0.2;
     z-index: -1;
     
-    @include media(">=phone", "<lgphone") {
+    @include bp.phone {
       width: 150px;
       height: 150px;
       top: -30px;
       right: -50px;
     }
     
-    @include media(">=lgphone", "<tablet") {
+    @include bp.lgphone {
       width: 180px;
       height: 180px;
       top: -40px;
@@ -54,13 +56,13 @@
     color: #666;
     letter-spacing: 1px;
     margin-bottom: 2rem;
-    @include media(">=phone", "<lgphone") {
+    @include bp.phone {
       font-size: 1rem;
     }
-    @include media(">=lgphone", "<tablet") {
+    @include bp.lgphone {
       font-size: 1.1rem;
     }
-    @include media(">=tablet", "<desktop") {
+    @include bp.tablet {
       font-size: 1.2rem;
     }
   }
@@ -75,17 +77,17 @@
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      @include media(">=phone", "<lgphone") {
+      @include bp.phone {
         font-size: 2rem;
         line-height: 1.3;
         margin: 0.3rem 0;
       }
-      @include media(">=lgphone", "<tablet") {
+      @include bp.lgphone {
         font-size: 2.5rem;
         line-height: 1.3;
         margin: 0.3rem 0;
       }
-      @include media(">=tablet", "<desktop") {
+      @include bp.tablet {
         font-size: 3.5rem;
         line-height: 1.2;
       }
@@ -99,19 +101,19 @@
     line-height: 1.6;
     color: #666;
     margin: 2rem 0;
-    @include media(">=phone", "<lgphone") {
+    @include bp.phone {
       font-size: 0.95rem;
       width: 100%;
       margin: 1rem 0;
       padding: 0 1rem;
     }
-    @include media(">=lgphone", "<tablet") {
+    @include bp.lgphone {
       font-size: 1rem;
       width: 100%;
       margin: 1.5rem 0;
       padding: 0 1rem;
     }
-    @include media(">=tablet", "<desktop") {
+    @include bp.tablet {
       font-size: 1.1rem;
       width: 90%;
     }

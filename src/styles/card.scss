@@ -10,10 +10,11 @@
   background-position: center;
   border-radius: 8px;
   border: 1px solid #eee;
-  transition: all 500ms ease-in-out;
+  transition: transform 320ms ease, box-shadow 320ms ease;
+  will-change: transform;
   
   &:hover{
-    transform: scale(1.1);
+    transform: scale(1.03);
     box-shadow: 0 7px 30px -10px rgba(150,170,180,0.5);
   }
   .content {
@@ -21,7 +22,7 @@
     text-align: center;
     padding: 10px;
     opacity: 0;
-    transition: all 500ms ease-in-out;
+    transition: opacity 320ms ease, transform 320ms ease;
     transform: translate(0, 20px);
     cursor: pointer;
     h1 {
@@ -44,5 +45,12 @@
       opacity: 1;
       transform: translate(0, 0px);
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .card:hover {
+    transform: none;
+    box-shadow: none;
   }
 }

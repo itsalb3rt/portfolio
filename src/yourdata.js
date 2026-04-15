@@ -178,7 +178,7 @@ export default {
   aboutParaThree:
     "He also have experience working with relational and spatial databases.",
   aboutImage:
-    "https://pbs.twimg.com/profile_images/1195145668416946177/QrdEfW8C_400x400.jpg",
+    "https://pbs.twimg.com/profile_images/2044217314015326208/e3M01aIu_400x400.jpg",
 
   //   End About Section ---------------------
 

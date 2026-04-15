@@ -6,28 +6,28 @@ const Footer = () => {
   return (
     <div className="section" id="contact">
       <div className="container">
-
-        <div>
-          <h1>Special Sponsors</h1>
-          <div className="sponsors-container">
-            {data.sponsors.map((sponsor, index) => (
-              <a
-                key={`sponsor-${index}`}
-                href={sponsor.url}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src={sponsor.img}
-                  alt={sponsor.name || `Sponsor ${index + 1}`}
-                  loading="lazy"
-                  decoding="async"
-                ></img>
-              </a>
-            ))}
+        {data.sponsors && data.sponsors.length > 0 && (
+          <div>
+            <h1>Special Sponsors</h1>
+            <div className="sponsors-container">
+              {data.sponsors.map((sponsor, index) => (
+                <a
+                  key={`sponsor-${index}`}
+                  href={sponsor.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src={sponsor.img}
+                    alt={sponsor.name || `Sponsor ${index + 1}`}
+                    loading="lazy"
+                    decoding="async"
+                  ></img>
+                </a>
+              ))}
+            </div>
           </div>
-        </div>
-        
+        )}
         <div className="footer-container">
           <h1 id="contact">Contact</h1>
           <h2>{data.contactSubHeading}</h2>

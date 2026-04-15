@@ -10,7 +10,7 @@ const Skills = () => {
           <div className="skills-grid">
             {data.skills.map((skill, index) => (
               <div className="skill" key={`skill-${index}`}>
-                <img src={skill.img} alt={`Skill icon ${index + 1}`} width="48" height="48"></img>
+                <img style={{objectFit: "contain"}} src={skill.img} alt={`Skill icon ${index + 1}`} width="48" height="48"></img>
                 <p>{skill.para}</p>
               </div>
             ))}

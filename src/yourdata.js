@@ -97,6 +97,12 @@ export default {
       url: 'https://lacasitadecharo.com'
     },
     {
+      title: 'Prevenseg SRL',
+      para: 'Prevense is a company that provides security solutions for businesses.',
+      imageSrc: 'https://prevensegsrl.com/prevenseg-logo.jpeg',
+      url: 'https://prevensegsrl.com'
+    },
+    {
       title: "Ta vivo",
       para: "Check if your service is down before your customers. Get notification via Discord, Email, Slack, Telegram or WhatsApp.",
       imageSrc: taVivoImage,

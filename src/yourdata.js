@@ -34,14 +34,18 @@ export default {
   //Change The Website Template
 
   //   Header Details ---------------------
+
+  
+
+
   name: "Albert",
   headerTagline: [
     //Line 1 For Header
-    "Web apps,",
+    "Mobile apps,",
     //Line 2 For Header
-    "products, brands,",
+    "& web platforms",
     //Line 3 For Header
-    "and experience",
+    "built to last",
   ],
   //   Header Paragraph
   headerParagraph:

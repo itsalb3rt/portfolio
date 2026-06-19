@@ -13,7 +13,7 @@ const IndexPage = () => (
   <Layout>
     <SEO
     title="Albert Hidalgo"
-    description={'docker, quasar framework, vue, react, postgres, wordpress, static site, web developer, applications, mobile, ios, android, javascript, nodejs, ci/cd, pipeline, github actions, linux, servers, seo'}
+    description={'docker, quasar framework, vue, react, postgres, wordpress, static site, web developer, applications, mobile, ios, android, javascript, nodejs, ci/cd, pipeline, github actions, linux, servers, seo, n8n, workflow automation, integrations, LLM'}
     lang="en"
     pathname="/"
     />

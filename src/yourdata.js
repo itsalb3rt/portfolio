@@ -66,7 +66,7 @@ export default {
     },
     {
       title:'REOREI',
-      para: 'Streamline your Investment process: AI Real Estate Analysis',
+      para: 'Streamline your Investment process: AI Real Estate Analysis with Python microservices automating data analysis and high-demand workloads.',
       imageSrc: reorei,
       url:'https://reorei.com'
     },
@@ -84,7 +84,7 @@ export default {
     },
     {
       title: 'Zenith Residential Properties LLC',
-      para: 'Real Estate Investment and Property Management Company.',
+      para: 'Real Estate Investment and Property Management Company. Automation processes with n8n and LLM models with warehouse data and external data sets.',
       imageSrc: zenith,
       url: 'https://www.zenithresidentialproperties.com'
     },
@@ -182,11 +182,11 @@ export default {
 
   // About Secton --------------
   aboutParaOne:
-    "Albert is a Frontend and Backend developer with experience in the website and web application creation industry.",
+    "Frontend and Backend Developer with over 10 years of experience in web and hybrid mobile development. I specialize in JavaScript and have professional experience with PHP, Node.js, TypeScript, Go, Docker, React, Next.js, Vue, and the Quasar Framework (Android and iOS).",
   aboutParaTwo:
-    "He Specialize in JavaScript and have professional experience working with PHP, Node JS, Docker, React and VUE. ",
+    "Skilled in working with relational and spatial databases.",
   aboutParaThree:
-    "He also have experience working with relational and spatial databases.",
+    "Experienced in building automation workflows and integrations using n8n to streamline business processes and connect complex systems efficiently. At Zenith, implemented automation processes with n8n and LLM models with warehouse data and external data sets.",
   aboutImage:
     "https://pbs.twimg.com/profile_images/2044217314015326208/e3M01aIu_400x400.jpg",
 
@@ -230,7 +230,7 @@ export default {
     {
       img: n8nIcon,
       para:
-        "Expert in workflow automation with n8n: email processing, Telegram business communication, WhatsApp AI agents, and custom automation solutions.",
+        "Expert in workflow automation with n8n: building integrations to streamline business processes and connect complex systems, automation processes with LLM models on warehouse and external data sets, email processing, Telegram business communication, WhatsApp AI agents, and custom automation solutions.",
     }
   ],
 

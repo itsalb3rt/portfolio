@@ -101,3 +101,38 @@ body {
   display: inline-block;
   vertical-align: middle;
 }
+
+/* Global focus + a11y polish */
+:focus-visible {
+  outline: 2px solid #111;
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+a:focus-visible,
+button:focus-visible,
+.primary-btn:focus-visible {
+  outline: 2px solid #111;
+  outline-offset: 3px;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+  .primary-btn::before {
+    display: none;
+  }
+}
+
+/* Improve primary-btn for disabled + focus */
+.primary-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}

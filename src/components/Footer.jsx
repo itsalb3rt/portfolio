@@ -29,7 +29,7 @@ const Footer = () => {
           </div>
         )}
         <div className="footer-container">
-          <h1 id="contact">Contact</h1>
+          <h1>Contact</h1>
           <h2>{data.contactSubHeading}</h2>
           <ContactForm />
           <a className="email-link" href={`mailto:${data.contactEmail}`}>

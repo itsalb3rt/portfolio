@@ -49,7 +49,7 @@ export default {
   ],
   //   Header Paragraph
   headerParagraph:
-    "Planing, design, development, quality assurance.",
+    "Planning, design, development, quality assurance.",
 
   //Contact Email
   contactEmail: "contact@albert.do",

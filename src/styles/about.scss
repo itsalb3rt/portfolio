@@ -18,24 +18,31 @@
   }
   .content {
     width: 50%;
+    max-width: 520px; /* better readable measure on desktop */
     @include bp.phone {
       width: 100%;
+      max-width: none;
     }
     @include bp.lgphone {
       width: 100%;
+      max-width: none;
     }
     @include bp.tablet {
       width: 100%;
+      max-width: none;
     }
 
     h1 {
       font-size: 3rem;
-      line-height: 20px;
+      line-height: 1.15;
       @include bp.tablet {
         text-align: center;
       }
     }
     p {
+      margin: 0.85em 0;
+      line-height: 1.55;
+
       @include bp.tablet {
         text-align: center;
       }
@@ -61,8 +68,11 @@
 
 .about-image{
   border-radius: 50%;
-  width: 300px;
-  height: 300px;
+  width: min(280px, 62vw);
+  height: auto;
+  aspect-ratio: 1 / 1;
+  max-width: 300px;
+  object-fit: cover;
 }
 
 .sponsors-container img {

@@ -9,7 +9,7 @@
   align-items: center;
   h1 {
     font-size: 3rem;
-    line-height: 20px;
+    line-height: 1.15;
   }
 
   img {
@@ -43,10 +43,18 @@
       align-items: center;
       text-align: center;
       img {
-        height: 3rem;
+        height: 2.6rem;
+      }
+      @include bp.phone {
+        img { height: 2.25rem; }
       }
       p {
-        font-size: 14px;
+        font-size: 0.85rem;
+        line-height: 1.45;
+        max-width: 280px;
+      }
+      @include bp.phone {
+        p { font-size: 0.82rem; max-width: 100%; }
       }
     }
   }

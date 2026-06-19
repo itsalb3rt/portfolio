@@ -11,7 +11,7 @@
 
   h1 {
     font-size: 3rem;
-    line-height: 20px;
+    line-height: 1.15;
   }
 
   .work-intro {
@@ -21,6 +21,7 @@
     color: #555;
     line-height: 1.5;
     font-size: 0.98rem;
+    padding: 0 0.5rem;
   }
 
   .grid {
@@ -60,7 +61,7 @@
       .card,
       .card--featured,
       .card--wide {
-        min-height: 250px;
+        min-height: 180px; /* allow variable height from content */
         grid-column: span 1;
       }
 
@@ -76,13 +77,18 @@
       .card,
       .card--featured,
       .card--wide {
-        min-height: 250px;
+        min-height: 180px; /* allow variable height from content */
         grid-column: span 1;
       }
 
       .card .content {
         opacity: 1;
         transform: translateY(0);
+      }
+      /* allow full readable text on mobile (override desktop clamp) */
+      .card .content p {
+        -webkit-line-clamp: unset;
+        overflow: visible;
       }
     }
 

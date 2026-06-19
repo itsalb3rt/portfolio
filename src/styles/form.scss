@@ -1,67 +1,53 @@
+/* Contact form — unified with site black/gray aesthetic */
 form {
-  /* Add margin or padding to create space between form elements */
   margin-bottom: 20px;
   width: 100%;
+  max-width: 620px;
 }
 
 form input,
-form textarea,
-form select {
-  /* Add margin or padding to create space between input elements */
-  margin-bottom: 10px;
-}
-
-input {
-  padding: 10px;
+form textarea {
+  margin-bottom: 14px;
+  padding: 12px 14px;
   border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
-  color: #333;
+  border-radius: 6px;
+  font-size: 16px; /* prevent iOS zoom */
+  color: #222;
   width: 100%;
+  background: #fff;
+  box-sizing: border-box;
+  font-family: "Montserrat", system-ui, sans-serif;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-input:focus {
+input:focus,
+textarea:focus {
   outline: none;
-  border-color: #007bff;
-  box-shadow: 0 0 5px #007bff;
-}
-
-/* Additional styles for specific input types */
-
-input[type="checkbox"],
-input[type="radio"] {
-  margin-right: 5px;
-}
-
-input[type="submit"],
-input[type="reset"],
-input[type="button"] {
-  background-color: #007bff;
-  color: #fff;
-  cursor: pointer;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  font-size: 16px;
+  border-color: #222;
+  box-shadow: 0 0 0 3px rgba(17, 17, 17, 0.08);
 }
 
 textarea {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
-  color: #333;
-  width: 100%;
-}
-
-textarea:focus {
-  outline: none;
-  border-color: #007bff;
-  box-shadow: 0 0 5px #007bff;
+  min-height: 140px;
+  resize: vertical;
 }
 
 form label {
   display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Error message */
+.form-error,
+form p[role="alert"] {
+  color: #a00;
+  background: #fff0f0;
+  border: 1px solid #f5c2c2;
+  padding: 10px 12px;
+  border-radius: 4px;
+  margin: 12px 0;
+  font-size: 0.9rem;
 }

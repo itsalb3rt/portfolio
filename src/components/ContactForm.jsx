@@ -52,56 +52,65 @@ const ContactForm = () => {
     setMessage('');
   };
 
+  const resetForm = () => {
+    setSuccess(false);
+    setError('');
+  };
+
   return (<>
     {success ?
       <div className="success-banner" role="status" aria-live="polite">
-        <span className="success-message"><span role="img" aria-label="celebrating emoji">🎉</span> Thank you! Your message has been submitted successfully. We will be in touch very soon. <span role="img" aria-label="smile emoji">😊</span></span>
+        <span className="success-message">
+          <span role="img" aria-label="celebrating emoji">🎉</span> Thank you! Your message has been submitted successfully. We will be in touch very soon. <span role="img" aria-label="smile emoji">😊</span>
+        </span>
+        <div style={{ marginTop: '10px' }}>
+          <button type="button" className="primary-btn" onClick={resetForm} style={{ fontSize: '0.85rem', padding: '8px 18px' }}>
+            Send another message
+          </button>
+        </div>
       </div>
       :
       <form onSubmit={handleSubmit}>
-        <div className="mb-4">
-          <div>
-            <label htmlFor="name">Name</label>
-          </div>
+        <div>
+          <label htmlFor="name">Name</label>
           <input
             type="text"
             id="name"
+            placeholder="Your name"
             value={name}
             onChange={(e) => setName(e.target.value)}
             required
           />
         </div>
-        <div className="mb-4">
-          <div>
-            <label htmlFor="email" className="block mb-2" required>Email</label>
-          </div>
+        <div>
+          <label htmlFor="email">Email</label>
           <input
             type="email"
             id="email"
+            placeholder="you@company.com"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
           />
         </div>
-        <div className="mb-4">
-          <div>
-            <label htmlFor="message" className="block mb-2">Message</label>
-          </div>
+        <div>
+          <label htmlFor="message">Message</label>
           <textarea
             id="message"
+            placeholder="Tell me about your project or idea..."
             value={message}
-            rows={8}
+            rows={7}
             onChange={(e) => setMessage(e.target.value)}
             required
           ></textarea>
         </div>
-        {error ? <p role="alert">{error}</p> : null}
+        {error ? <p className="form-error" role="alert">{error}</p> : null}
         <div style={{ textAlign: 'center' }}>
           <button
-            style={{ textAlign: 'center', minWidth: '116px', maxHeight: '46px' }}
             className="primary-btn"
             disabled={loading}
             type="submit"
+            style={{ minWidth: '140px' }}
           >
             {loading ? <Spinner /> : 'Send Message'}
           </button>

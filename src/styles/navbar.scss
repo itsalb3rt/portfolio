@@ -65,7 +65,12 @@
       }
     }
     .active {
-      color: black;
+      color: #000;
+      font-weight: 600;
+    }
+    .active::after {
+      width: 80%;
+      left: 10%;
     }
   }
 }

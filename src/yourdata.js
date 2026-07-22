@@ -28,6 +28,7 @@ import zenith from './images/zenith.webp'
 import anncar from './images/anncar.jpeg'
 import gtc from './images/gtc.webp'
 import reinapp from './images/reinapp.webp'
+import bookstantify from './images/bookstantify.webp'
 
 export default {
   //(Please Do Not Remove The comma(,) after every variable)
@@ -63,6 +64,12 @@ export default {
       para: "All in one Fitness FREE App.",
       imageSrc: mutusImage,
       url: "https://mutus.app",
+    },
+    {
+      title: "Bookstantify",
+      para: "The real digital bookjournal for book lovers. Track your reading progress, organize your books, and keep your reading habits in one place.",
+      imageSrc: bookstantify,
+      url: "https://bookstantify.com",
     },
     {
       title:'REOREI',

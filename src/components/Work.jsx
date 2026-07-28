@@ -1,11 +1,9 @@
 import React from "react"
 import Card from "./atoms/Card"
+
 import data from "../yourdata"
-import useScrollReveal from "./hooks/useScrollReveal"
 
 const Work = () => {
-  const [ref, visible] = useScrollReveal()
-
   const getCardVariant = (index) => {
     if (index === 0) return "card--featured"
     if (index % 5 === 0) return "card--wide"
@@ -13,9 +11,9 @@ const Work = () => {
   }
 
   return (
-    <div className="section" id="work" ref={ref}>
+    <div className="section" id="work">
       <div className="container">
-        <div className={`work-wrapper ${visible ? "visible" : ""}`}>
+        <div className="work-wrapper">
           <h1>Work</h1>
           <p className="work-intro">
             Selected projects focused on product quality, business impact, and clean execution.
@@ -32,7 +30,7 @@ const Work = () => {
                 projectLink={project.url}
                 loading={index === 0 ? "eager" : "lazy"}
                 fetchPriority={index === 0 ? "high" : "auto"}
-              />
+              ></Card>
             ))}
           </div>
         </div>

@@ -1,41 +1,31 @@
 @charset "utf-8";
-@use "./tokens";
+@use "./card";
 @use "./navbar";
 @use "./header";
 @use "./work";
-@use "./card";
 @use "./about";
 @use "./skills";
+@use "./promotion";
 @use "./footer";
 @use "./form";
 @use "./spinner";
 
 * {
-  font-family: var(--font-sans);
-  box-sizing: border-box;
+  font-family: "Montserrat";
 }
 
 body {
   margin: 0;
   padding: 0;
-  background: var(--color-bg);
-  color: var(--color-text-primary);
   overflow-y: scroll;
   overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-::selection {
-  background: var(--color-accent);
-  color: white;
 }
 
 .section {
   width: 100%;
   max-width: 100%;
   height: auto;
-  scroll-margin-top: 70px;
+  overflow: hidden;
 }
 
 .container {
@@ -48,49 +38,53 @@ body {
 }
 
 .primary-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-2);
-  margin: var(--space-2);
-  padding: 14px 32px;
-  background-color: var(--color-accent);
+  margin: 10px;
+  padding: 12px 28px;
+  background-color: #000;
   color: white;
-  border: none;
-  border-radius: var(--radius-md);
-  font-size: 0.95rem;
+  border: 2px solid #000;
+  border-radius: 4px;
+  font-size: 1rem;
   font-weight: 500;
-  font-family: var(--font-sans);
-  transition: background var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+  transition: all 0.3s ease;
   text-decoration: none;
   cursor: pointer;
-  line-height: 1;
-
-  &:hover {
-    background-color: var(--color-accent-hover);
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150%;
+    height: 150%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translate(-50%, -50%) rotate(45deg) translateY(100%);
+    transition: transform 0.6s ease;
   }
-
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    
+    &::before {
+      transform: translate(-50%, -50%) rotate(45deg) translateY(0);
+    }
+  }
+  
   &:active {
     transform: translateY(0);
-  }
-
-  &:disabled {
-    opacity: 0.65;
-    cursor: not-allowed;
-    transform: none;
-    box-shadow: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   }
 }
 
 .success-banner {
-  background-color: #16a34a;
+  background-color: #4caf50;
   color: #fff;
-  padding: var(--space-4) var(--space-5);
+  padding: 10px;
   text-align: center;
-  margin: var(--space-5) auto;
-  border-radius: var(--radius-md);
+  margin: 20px auto;
 }
 
 .success-banner p {
@@ -108,12 +102,21 @@ body {
   vertical-align: middle;
 }
 
+/* Global focus + a11y polish */
 :focus-visible {
-  outline: 2px solid var(--color-accent);
-  outline-offset: 2px;
+  outline: 2px solid #111;
+  outline-offset: 3px;
   border-radius: 3px;
 }
 
+a:focus-visible,
+button:focus-visible,
+.primary-btn:focus-visible {
+  outline: 2px solid #111;
+  outline-offset: 3px;
+}
+
+/* Respect reduced motion */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -121,15 +124,15 @@ body {
     transition: none !important;
     animation: none !important;
   }
+  .primary-btn::before {
+    display: none;
+  }
 }
 
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* Improve primary-btn for disabled + focus */
+.primary-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
 }

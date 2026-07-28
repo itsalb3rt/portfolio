@@ -12,7 +12,7 @@ const Card = ({
   const hasProjectLink = Boolean(projectLink)
 
   return (
-    <article className={`card ${className}`}>
+    <article className={`card ${className}`} style={{ border: "1px solid rgba(0, 0, 0, 0.1)" }}>
       <img
         className="card-image"
         src={imgUrl}
@@ -33,11 +33,11 @@ const Card = ({
             rel="noopener noreferrer"
             className="btn"
           >
-            View project
+            Explore
           </a>
         ) : (
           <span className="btn btn-disabled" aria-disabled="true">
-            View project
+            Explore
           </span>
         )}
       </div>

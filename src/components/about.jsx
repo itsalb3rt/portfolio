@@ -1,14 +1,11 @@
 import React from "react"
 import data from "../yourdata"
-import useScrollReveal from "./hooks/useScrollReveal"
 
 const About = () => {
-  const [ref, visible] = useScrollReveal()
-
   return (
-    <div className="section" id="about" ref={ref}>
+    <div className="section" id="about">
       <div className="container">
-        <div className={`about-section ${visible ? "visible" : ""}`}>
+        <div className="about-section">
           <div className="content">
             <h1>About Me</h1>
             <p>{data.aboutParaOne}</p>
@@ -25,7 +22,7 @@ const About = () => {
               decoding="async"
               width="300"
               height="300"
-            />
+            ></img>
           </div>
         </div>
       </div>

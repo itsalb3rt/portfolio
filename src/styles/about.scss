@@ -1,81 +1,55 @@
-@use "./breakpoints" as bp;
+#about {
+  padding: var(--space-10) 0;
+}
 
 .about-section {
-  width: 80vw;
-  max-width: 1024px;
-  margin-top: 10vh;
+  width: 90vw;
+  max-width: 1100px;
+  margin: 0 auto;
   display: flex;
-  justify-content: space-between;
-  @include bp.phone {
+  align-items: center;
+  gap: var(--space-10);
+
+  @media (max-width: 768px) {
     flex-direction: column-reverse;
+    text-align: center;
+
+    .content p {
+      max-width: none;
+    }
   }
-  @include bp.lgphone {
-    flex-direction: column-reverse;
+
+  &.visible {
+    animation: fadeUp 600ms ease forwards;
   }
-  @include bp.tablet {
-    flex-direction: column-reverse;
-    align-items: center;
-  }
+
   .content {
-    width: 50%;
-    max-width: 520px; /* better readable measure on desktop */
-    @include bp.phone {
-      width: 100%;
-      max-width: none;
-    }
-    @include bp.lgphone {
-      width: 100%;
-      max-width: none;
-    }
-    @include bp.tablet {
-      width: 100%;
-      max-width: none;
-    }
+    flex: 1;
 
     h1 {
-      font-size: 3rem;
-      line-height: 1.15;
-      @include bp.tablet {
-        text-align: center;
-      }
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin: 0 0 var(--space-5);
     }
+
     p {
-      margin: 0.85em 0;
-      line-height: 1.55;
-
-      @include bp.tablet {
-        text-align: center;
-      }
+      margin: 0 0 var(--space-4);
+      line-height: 1.65;
+      color: var(--color-text-secondary);
+      max-width: 560px;
     }
   }
+
   .image-wrapper {
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    @include bp.phone {
-      width: 100%;
-    }
-    @include bp.lgphone {
-      width: 100%;
-    }
-    @include bp.tablet {
-      width: 100%;
-    }
+    flex-shrink: 0;
   }
 }
 
-.about-image{
+.about-image {
   border-radius: 50%;
-  width: min(280px, 62vw);
-  height: auto;
-  aspect-ratio: 1 / 1;
-  max-width: 300px;
+  width: min(260px, 50vw);
+  aspect-ratio: 1;
   object-fit: cover;
-}
-
-.sponsors-container img {
-  width: 50px;
-  border-radius: 50%;
+  border: 3px solid var(--color-border);
 }

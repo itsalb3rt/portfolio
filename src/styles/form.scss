@@ -1,53 +1,56 @@
-/* Contact form — unified with site black/gray aesthetic */
 form {
-  margin-bottom: 20px;
   width: 100%;
-  max-width: 620px;
+  max-width: 480px;
 }
 
-form input,
-form textarea {
-  margin-bottom: 14px;
-  padding: 12px 14px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 16px; /* prevent iOS zoom */
-  color: #222;
-  width: 100%;
-  background: #fff;
-  box-sizing: border-box;
-  font-family: "Montserrat", system-ui, sans-serif;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-input:focus,
-textarea:focus {
-  outline: none;
-  border-color: #222;
-  box-shadow: 0 0 0 3px rgba(17, 17, 17, 0.08);
-}
-
-textarea {
-  min-height: 140px;
-  resize: vertical;
+form div {
+  margin-bottom: var(--space-4);
 }
 
 form label {
   display: block;
-  margin-bottom: 6px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: #333;
+  margin-bottom: var(--space-2);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
 }
 
-/* Error message */
+form input,
+form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+  font-family: var(--font-sans);
+  color: var(--color-text-primary);
+  background: var(--color-surface);
+  box-sizing: border-box;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+
+  &::placeholder {
+    color: var(--color-text-muted);
+  }
+
+  &:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  }
+}
+
+textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
 .form-error,
 form p[role="alert"] {
-  color: #a00;
-  background: #fff0f0;
-  border: 1px solid #f5c2c2;
-  padding: 10px 12px;
-  border-radius: 4px;
-  margin: 12px 0;
-  font-size: 0.9rem;
+  color: #dc2626;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-sm);
+  margin: var(--space-4) 0;
+  font-size: 0.875rem;
 }

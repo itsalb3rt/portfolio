@@ -57,7 +57,7 @@ const Navbar = () => {
             className="name"
             onClick={(event) => handleNavClick(event, "home")}
           >
-            Portfolio.
+            Albert
           </a>
           <div className="links-wrapper">
             <a

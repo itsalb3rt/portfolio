@@ -34,16 +34,6 @@
     .card {
       min-height: 260px;
       grid-column: span 4;
-
-      .content {
-        opacity: 0;
-        transform: translateY(16px);
-      }
-
-      &:hover .content {
-        opacity: 1;
-        transform: translateY(0);
-      }
     }
 
     .card--featured {
@@ -64,11 +54,6 @@
         min-height: 180px; /* allow variable height from content */
         grid-column: span 1;
       }
-
-      .card .content {
-        opacity: 1;
-        transform: translateY(0);
-      }
     }
 
     @include bp.lgphone {
@@ -79,16 +64,6 @@
       .card--wide {
         min-height: 180px; /* allow variable height from content */
         grid-column: span 1;
-      }
-
-      .card .content {
-        opacity: 1;
-        transform: translateY(0);
-      }
-      /* allow full readable text on mobile (override desktop clamp) */
-      .card .content p {
-        -webkit-line-clamp: unset;
-        overflow: visible;
       }
     }
 

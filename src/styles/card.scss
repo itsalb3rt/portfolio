@@ -4,7 +4,7 @@
   position: relative;
   overflow: hidden !important;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   border-radius: 8px;
   border: 1px solid #eee;
@@ -54,11 +54,6 @@
       line-height: 1.4;
       color: #2b2b2b;
       margin-bottom: 12px;
-      /* prevent extremely tall overlays on desktop */
-      display: -webkit-box;
-      -webkit-line-clamp: 5;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
     }
 
     .btn {

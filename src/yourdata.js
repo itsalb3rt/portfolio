@@ -29,6 +29,7 @@ import anncar from './images/anncar.jpeg'
 import gtc from './images/gtc.webp'
 import reinapp from './images/reinapp.webp'
 import bookstantify from './images/bookstantify.webp'
+import calificado from './images/calificado.webp'
 
 export default {
   //(Please Do Not Remove The comma(,) after every variable)
@@ -70,6 +71,12 @@ export default {
       para: "The real digital bookjournal for book lovers. Track your reading progress, organize your books, and keep your reading habits in one place.",
       imageSrc: bookstantify,
       url: "https://bookstantify.com",
+    },
+    {
+      title: 'Calificado',
+      para: 'Manage your school with AI, grades, attendance, discipline, and report cards all in one place. Designed from the ground up for the Dominican education system and its MINERD regulations.',
+      imageSrc: calificado,
+      url: 'https://calificado.do'
     },
     {
       title:'REOREI',

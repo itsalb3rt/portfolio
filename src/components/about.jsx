@@ -27,10 +27,6 @@ const About = () => {
                 fetchPriority="low"
                 decoding="async"
               />
-              <figcaption className="about-caption">
-                <span className="about-caption-dot" aria-hidden="true" />
-                albert hidalgo — santo domingo, dr
-              </figcaption>
             </figure>
           </Reveal>
         </div>

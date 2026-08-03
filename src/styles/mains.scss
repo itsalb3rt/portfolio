@@ -208,17 +208,6 @@ img {
   }
 }
 
-// ── Success banner ───────────────────────────
-
-.success-banner {
-  background: var(--success);
-  color: var(--accent-ink);
-  padding: var(--space-5);
-  border-radius: var(--radius-md);
-  text-align: center;
-  margin: var(--space-4) auto;
-}
-
 // ── A11y ─────────────────────────────────────
 
 :focus-visible {

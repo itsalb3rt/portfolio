@@ -97,7 +97,7 @@ function SEO({ description, lang, meta, title, pathname, image }) {
         },
         {
           name: `theme-color`,
-          content: `#111111`,
+          content: site.themeColor || `#0b0b0d`,
         },
       ].concat(meta)}
       link={[

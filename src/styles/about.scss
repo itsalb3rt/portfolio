@@ -1,81 +1,92 @@
 @use "./breakpoints" as bp;
 
 .about-section {
-  width: 80vw;
-  max-width: 1024px;
-  margin-top: 10vh;
-  display: flex;
-  justify-content: space-between;
+  padding: var(--space-9) 0;
+  display: grid;
+  grid-template-columns: 1.45fr 1fr;
+  gap: var(--space-8);
+  align-items: center;
+
   @include bp.phone {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
     flex-direction: column-reverse;
   }
+
   @include bp.lgphone {
-    flex-direction: column-reverse;
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
   }
+
   @include bp.tablet {
-    flex-direction: column-reverse;
-    align-items: center;
+    grid-template-columns: 1fr;
+    gap: var(--space-7);
   }
-  .content {
-    width: 50%;
-    max-width: 520px; /* better readable measure on desktop */
-    @include bp.phone {
-      width: 100%;
-      max-width: none;
-    }
-    @include bp.lgphone {
-      width: 100%;
-      max-width: none;
-    }
-    @include bp.tablet {
-      width: 100%;
-      max-width: none;
-    }
+}
 
-    h1 {
-      font-size: 3rem;
-      line-height: 1.15;
-      @include bp.tablet {
-        text-align: center;
-      }
-    }
-    p {
-      margin: 0.85em 0;
-      line-height: 1.55;
-
-      @include bp.tablet {
-        text-align: center;
-      }
-    }
+.about-copy {
+  .about-statement {
+    font-size: clamp(1.25rem, 2.4vw, 1.6rem);
+    line-height: 1.5;
+    font-weight: 500;
+    color: var(--ink);
+    margin: var(--space-5) 0 0;
+    letter-spacing: -0.015em;
   }
-  .image-wrapper {
-    width: 50%;
+
+  .about-body {
+    color: var(--ink-muted);
+    line-height: 1.7;
+    margin: var(--space-4) 0 0;
+    max-width: 58ch;
+  }
+}
+
+.about-visual {
+  .about-figure {
+    margin: 0;
+    position: relative;
+  }
+
+  .about-image {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border);
+    filter: saturate(0.92) contrast(1.02);
+    transition: filter 0.4s ease;
+  }
+
+  .about-figure::after {
+    content: "";
+    position: absolute;
+    inset: var(--space-4);
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius-lg);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .about-image:hover {
+    filter: saturate(1.05) contrast(1.04);
+  }
+
+  .about-caption {
     display: flex;
     align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    @include bp.phone {
-      width: 100%;
-    }
-    @include bp.lgphone {
-      width: 100%;
-    }
-    @include bp.tablet {
-      width: 100%;
-    }
+    gap: 0.5rem;
+    margin-top: var(--space-3);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    color: var(--ink-faint);
   }
-}
 
-.about-image{
-  border-radius: 50%;
-  width: min(280px, 62vw);
-  height: auto;
-  aspect-ratio: 1 / 1;
-  max-width: 300px;
-  object-fit: cover;
-}
-
-.sponsors-container img {
-  width: 50px;
-  border-radius: 50%;
+  .about-caption-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
 }

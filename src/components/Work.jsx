@@ -1,6 +1,6 @@
 import React from "react"
 import Card from "./atoms/Card"
-
+import Reveal from "./atoms/Reveal"
 import data from "../yourdata"
 
 const Work = () => {
@@ -11,31 +11,48 @@ const Work = () => {
   }
 
   return (
-    <div className="section" id="work">
+    <section className="section" id="work">
       <div className="container">
         <div className="work-wrapper">
-          <h1>Work</h1>
-          <p className="work-intro">
-            Selected projects focused on product quality, business impact, and clean execution.
-          </p>
+          <Reveal>
+            <div className="section-head">
+              <div>
+                <p className="section-eyebrow">02 · Selected work</p>
+                <h1 className="section-title">Work</h1>
+              </div>
+              <p className="work-intro">
+                Selected projects focused on product quality, business impact,
+                and clean execution. Hover any card for the story.
+              </p>
+            </div>
+          </Reveal>
 
           <div className="grid project-container">
-            {data.projects.map((project, index) => (
-              <Card
-                key={`project-${index}`}
-                className={getCardVariant(index)}
-                heading={project.title}
-                paragraph={project.para}
-                imgUrl={project.imageSrc}
-                projectLink={project.url}
-                loading={index === 0 ? "eager" : "lazy"}
-                fetchPriority={index === 0 ? "high" : "auto"}
-              ></Card>
-            ))}
+            {data.projects.map((project, index) => {
+              const variant = getCardVariant(index)
+              return (
+                <Reveal
+                  key={`project-${index}`}
+                  delay={(index % 3) * 70}
+                  className={`grid-reveal ${variant}`}
+                >
+                  <Card
+                    className={variant}
+                    heading={project.title}
+                    paragraph={project.para}
+                    tags={project.tags}
+                    imgUrl={project.imageSrc}
+                    projectLink={project.url}
+                    loading={index === 0 ? "eager" : "lazy"}
+                    fetchPriority={index === 0 ? "high" : "auto"}
+                  />
+                </Reveal>
+              )
+            })}
           </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

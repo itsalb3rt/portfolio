@@ -1,7 +1,3 @@
-/**
- * Main application layout wrapper.
- */
-
 import React from "react"
 import Navbar from "./Navbar"
 import "../styles/mains.scss"
@@ -9,8 +5,11 @@ import "../styles/mains.scss"
 const Layout = ({ children }) => {
   return (
     <>
-      <Navbar></Navbar>
-      <main>{children}</main>
+      <a href="#main" className="skip-link">
+        Skip to content
+      </a>
+      <Navbar />
+      <main id="main">{children}</main>
     </>
   )
 }

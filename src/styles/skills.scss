@@ -1,61 +1,92 @@
 @use "./breakpoints" as bp;
 
 .skills-container {
-  width: 80vw;
-  max-width: 1024px;
-  margin-top: 5vh;
+  padding: var(--space-9) 0;
+}
+
+.skills-list {
+  border-top: 1px solid var(--border);
+}
+
+.skill {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  h1 {
-    font-size: 3rem;
-    line-height: 1.15;
+  gap: var(--space-5);
+  padding: var(--space-5) var(--space-4);
+  border-bottom: 1px solid var(--border);
+  transition: background-color 0.3s ease, padding-left 0.3s var(--ease-out);
+
+  &:hover {
+    background: var(--surface);
+    padding-left: var(--space-6);
+
+    .skill-index {
+      color: var(--accent);
+    }
+
+    .skill-arrow {
+      opacity: 1;
+      transform: translateX(0);
+    }
   }
 
-  img {
-    opacity: 0.9;
-    transition: ease 0.5s;
+  @include bp.phone {
+    gap: var(--space-3);
+    padding: var(--space-4) var(--space-2);
   }
 
-
-  img:hover {
-    opacity: 1;
-    transition: ease 0.5s;
+  .skill-index {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--ink-faint);
+    transition: color 0.3s ease;
+    min-width: 2.2rem;
   }
 
-  .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    margin-top: 50px;
-    grid-gap: 20px;
+  .skill-icon {
+    object-fit: contain;
+    filter: grayscale(0.2);
+    transition: filter 0.3s ease;
+
     @include bp.phone {
-      grid-template-columns: 1fr;
+      width: 28px;
+      height: 28px;
     }
-    @include bp.lgphone {
-      grid-template-columns: 1fr;
+  }
+
+  &:hover .skill-icon {
+    filter: grayscale(0);
+  }
+
+  .skill-copy {
+    flex: 1;
+    min-width: 0;
+
+    .skill-name {
+      font-size: 1.15rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
     }
-    @include bp.tablet {
-      grid-template-columns: 1fr 1fr;
+
+    .skill-para {
+      margin: 0.25rem 0 0;
+      color: var(--ink-muted);
+      font-size: 0.92rem;
+      line-height: 1.55;
+      max-width: 62ch;
     }
-    .skill {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      img {
-        height: 2.6rem;
-      }
-      @include bp.phone {
-        img { height: 2.25rem; }
-      }
-      p {
-        font-size: 0.85rem;
-        line-height: 1.45;
-        max-width: 280px;
-      }
-      @include bp.phone {
-        p { font-size: 0.82rem; max-width: 100%; }
-      }
+  }
+
+  .skill-arrow {
+    color: var(--accent);
+    font-size: 1.1rem;
+    opacity: 0;
+    transform: translateX(-6px);
+    transition: opacity 0.3s ease, transform 0.3s var(--ease-out);
+
+    @media (hover: none) {
+      opacity: 1;
+      transform: none;
     }
   }
 }

@@ -1,12 +1,91 @@
+@use "./breakpoints" as bp;
+
 .promotion-container {
-  width: 80vw;
-  margin-top: 10vh;
+  padding: var(--space-9) 0;
+}
+
+.activity-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+
+  @include bp.phone {
+    grid-template-columns: 1fr;
+  }
+
+  @include bp.lgphone {
+    grid-template-columns: 1fr;
+  }
+
+  @include bp.tablet {
+    grid-template-columns: 1fr 1fr;
+
+    .activity-card:last-child {
+      grid-column: span 2;
+    }
+  }
+}
+
+.activity-card {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
-  h1 {
-    font-size: 3rem;
-    line-height: 1.15;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(165deg, var(--surface) 0%, rgba(20, 20, 23, 0.3) 100%);
+  text-decoration: none;
+  min-height: 180px;
+  transition: border-color var(--duration-base) var(--ease-out),
+    transform var(--duration-base) var(--ease-out),
+    box-shadow var(--duration-base) var(--ease-out);
+
+  &:hover {
+    border-color: rgba(198, 242, 78, 0.4);
+    transform: translateY(-4px);
+    box-shadow: 0 20px 50px -22px rgba(0, 0, 0, 0.75);
+
+    .activity-arrow {
+      background: var(--accent);
+      color: var(--accent-ink);
+      border-color: var(--accent);
+    }
+  }
+
+  .activity-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .activity-index {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--ink-faint);
+  }
+
+  .activity-arrow {
+    width: 34px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    border: 1px solid var(--border-strong);
+    color: var(--ink-muted);
+    font-size: 0.95rem;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  }
+
+  .activity-name {
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-top: auto;
+  }
+
+  .activity-desc {
+    margin: 0;
+    color: var(--ink-muted);
+    font-size: 0.9rem;
+    line-height: 1.55;
   }
 }

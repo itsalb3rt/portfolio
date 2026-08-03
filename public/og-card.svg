@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0b0b0d"/>
+  <radialGradient id="g" cx="82%" cy="8%" r="70%">
+    <stop offset="0%" stop-color="#c6f24e" stop-opacity="0.16"/>
+    <stop offset="100%" stop-color="#c6f24e" stop-opacity="0"/>
+  </radialGradient>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <text x="80" y="120" font-family="Arial, Helvetica, sans-serif" font-size="28" fill="#a3a3ad" letter-spacing="4">// FULL-STACK ENGINEERING</text>
+  <text x="80" y="290" font-family="Arial, Helvetica, sans-serif" font-size="84" font-weight="700" fill="#f2f2ef">Mobile apps, web platforms</text>
+  <text x="80" y="390" font-family="Arial, Helvetica, sans-serif" font-size="84" font-weight="700" fill="#c6f24e">&amp; automation workflows,</text>
+  <text x="80" y="490" font-family="Arial, Helvetica, sans-serif" font-size="84" font-weight="700" fill="#f2f2ef">built to last.</text>
+  <text x="80" y="556" font-family="Arial, Helvetica, sans-serif" font-size="26" fill="#a3a3ad">albert hidalgo — albert.do</text>
+</svg>

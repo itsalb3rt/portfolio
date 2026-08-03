@@ -1,16 +1,11 @@
 // Skills Icons
+import jsIcon from "./images/js.png"
+import nodejsLogo from "./images/nodejs.png"
 import dockerIcon from "./images/docker.svg"
 import vueIcon from "./images/vue.png"
-import nodejsLogo from "./images/nodejs.png"
 import reactIcon from "./images/react.svg"
-import jsIcon from "./images/js.png"
 import designIcon from "./images/design.svg"
 import n8nIcon from "./images/n8n.webp"
-
-// Social Icon
-import githubIcon from "./images/github.svg"
-import linkedinIcon from "./images/linkedin.svg"
-import twitterIcon from "./images/twitter.png"
 
 // Work images
 import mutusImage from './images/mutus.webp'
@@ -31,27 +26,23 @@ import reinapp from './images/reinapp.webp'
 import bookstantify from './images/bookstantify.webp'
 import calificado from './images/calificado.webp'
 
+// About portrait (local asset — no external CDN)
+import portrait from './images/albert-hidalgo.png'
+
 export default {
-  //(Please Do Not Remove The comma(,) after every variable)
-  //Change The Website Template
+  name: "Albert",
 
   //   Header Details ---------------------
-
-  
-
-
-  name: "Albert",
   headerTagline: [
     //Line 1 For Header
-    "Mobile apps,",
+    "Mobile apps, web platforms",
     //Line 2 For Header
-    "& web platforms",
+    "& automation workflows,",
     //Line 3 For Header
-    "built to last",
+    "built to last.",
   ],
-  //   Header Paragraph
   headerParagraph:
-    "Planning, design, development, quality assurance.",
+    "Full-stack engineering, product design, quality assurance, and n8n automation — from first wireframe to production traffic.",
 
   //Contact Email
   contactEmail: "contact@albert.do",
@@ -62,221 +53,224 @@ export default {
   projects: [
     {
       title: "MUTUS",
-      para: "All in one Fitness FREE App.",
+      para: "All-in-one fitness app — free, cross-platform, and built with Quasar.",
+      tags: ["Mobile", "Fitness", "Quasar"],
       imageSrc: mutusImage,
       url: "https://mutus.app",
     },
     {
       title: "Bookstantify",
-      para: "The real digital bookjournal for book lovers. Track your reading progress, organize your books, and keep your reading habits in one place.",
+      para: "The digital book journal for book lovers. Track reading progress, organize your library, and keep every habit in one place.",
+      tags: ["Web App", "SaaS", "Lifestyle"],
       imageSrc: bookstantify,
       url: "https://bookstantify.com",
     },
     {
-      title: 'Calificado',
-      para: 'Manage your school with AI, grades, attendance, discipline, and report cards all in one place. Designed from the ground up for the Dominican education system and its MINERD regulations.',
+      title: "Calificado",
+      para: "Manage your school with AI — grades, attendance, discipline, and report cards in one place, built for the Dominican education system and its MINERD regulations.",
+      tags: ["SaaS", "AI", "EdTech"],
       imageSrc: calificado,
-      url: 'https://calificado.do'
+      url: "https://calificado.do",
     },
     {
-      title:'REOREI',
-      para: 'Streamline your Investment process: AI Real Estate Analysis with Python microservices automating data analysis and high-demand workloads.',
+      title: "REOREI",
+      para: "AI real estate analysis with Python microservices automating data analysis and high-demand workloads.",
+      tags: ["AI", "Real Estate", "Microservices"],
       imageSrc: reorei,
-      url:'https://reorei.com'
+      url: "https://reorei.com",
     },
     {
-      title: 'ReinAPP',
-      para: 'Connecting entrepreneurs with customers',
+      title: "ReinAPP",
+      para: "Connecting local entrepreneurs with their customers.",
+      tags: ["Mobile", "Web"],
       imageSrc: reinapp,
-      url: 'https://reinapp.com.do'
+      url: "https://reinapp.com.do",
     },
     {
-      title: 'GT Consulting store',
-      para: 'GT Consulting e-commerce store.',
+      title: "GT Consulting store",
+      para: "Full e-commerce storefront for GT Consulting.",
+      tags: ["E-commerce"],
       imageSrc: gtc,
-      url: 'https://tienda.gtconsultingonline.com'
+      url: "https://tienda.gtconsultingonline.com",
     },
     {
-      title: 'Zenith Residential Properties LLC',
-      para: 'Real Estate Investment and Property Management Company. Automation processes with n8n and LLM models with warehouse data and external data sets.',
+      title: "Zenith Residential Properties",
+      para: "Real estate investment and property management. Automation with n8n and LLM models over warehouse data and external datasets.",
+      tags: ["Automation", "AI", "Real Estate"],
       imageSrc: zenith,
-      url: 'https://www.zenithresidentialproperties.com'
+      url: "https://www.zenithresidentialproperties.com",
     },
     {
-      title: 'Anncar Equipment Parts',
-      para: 'We offer a vast selection of new aftermarket, rebuilt and used parts for Caterpillar®, Komatsu®, JCB® and other popular heavy equipment manufacturers.',
+      title: "Anncar Equipment Parts",
+      para: "A vast catalog of new aftermarket, rebuilt and used parts for Caterpillar, Komatsu, JCB and other heavy equipment manufacturers.",
+      tags: ["Web App", "E-commerce"],
       imageSrc: anncar,
-      url: 'https://app.anncarequipment.com'
+      url: "https://app.anncarequipment.com",
     },
     {
-      title: 'La Casita de Charo',
-      para: 'Villas landing page located in the city of Constanza, Dominican Republic.',
+      title: "La Casita de Charo",
+      para: "Villa rental landing page in Constanza, Dominican Republic.",
+      tags: ["Landing", "Travel"],
       imageSrc: laCasitaDeCharo,
-      url: 'https://lacasitadecharo.com'
+      url: "https://lacasitadecharo.com",
     },
     {
-      title: 'Prevenseg SRL',
-      para: 'Prevense is a company that provides security solutions for businesses.',
-      imageSrc: 'https://prevensegsrl.com/prevenseg-logo.jpeg',
-      url: 'https://prevensegsrl.com'
+      title: "Prevenseg SRL",
+      para: "Security solutions for businesses — corporate presence with a clean, trustworthy feel.",
+      tags: ["Web", "Business"],
+      imageSrc: "https://prevensegsrl.com/prevenseg-logo.jpeg",
+      url: "https://prevensegsrl.com",
     },
     {
       title: "Ta vivo",
-      para: "Check if your service is down before your customers. Get notification via Discord, Email, Slack, Telegram or WhatsApp.",
+      para: "Know your service is down before your customers do. Alerts via Discord, Email, Slack, Telegram or WhatsApp.",
+      tags: ["SaaS", "DevTools"],
       imageSrc: taVivoImage,
       url: "https://landing-tavivo.albert.do",
     },
     {
       title: "Cowofi",
-      para: "Find perfect working space near you!",
+      para: "Find the perfect workspace near you.",
+      tags: ["Web App", "Productivity"],
       imageSrc: cowofiImage,
       url: "https://cowofi.netlify.app",
     },
     {
-      title: "Bohios", //Project Title - Add Your Project Title Here
-      para:
-        "For real estate agencies, agents & individuals looking to promote, sell or rent their properties.", // Add Your Service Type Here
-      //Project Image - Add Your Project Image Here
+      title: "Bohios",
+      para: "Real estate listings for agencies, agents and individuals — promote, sell or rent with confidence.",
+      tags: ["Landing", "Real Estate"],
       imageSrc: bohiosImage,
-      //Project URL - Add Your Project Url Here
       url: "https://bohio-landing.netlify.app",
     },
     {
       title: "SavyCart",
-      para:
-        "Create the grocery list and carry it in your pocket. no more pencil and paper.",
+      para: "The grocery list that lives in your pocket — no more pencil and paper.",
+      tags: ["Mobile", "Productivity"],
       imageSrc: savyCartImage,
       url: "https://savycart.albert.do",
     },
     {
-      title: "Afterman", //Project Title - Add Your Project Title Here
-      para:
-        "Create beutiful docs in markdown and HTML from postman collection.", // Add Your Service Type Here
-      //Project Image - Add Your Project Image Here
+      title: "Afterman",
+      para: "Turn Postman collections into beautiful Markdown and HTML documentation.",
+      tags: ["Open Source", "DevTools"],
       imageSrc: aftermanImage,
-      //Project URL - Add Your Project Url Here
       url: "https://github.com/itsalb3rt/afterman",
     },
     {
-      title: "Cloudcsv", //Project Title - Add Your Project Title Here
-      para:
-        "Open source web application for the storage of dynamic CSV files, user management, email notifications and more.", // Add Your Service Type Here
-      //Project Image - Add Your Project Image Here
+      title: "Cloudcsv",
+      para: "Open-source web app for dynamic CSV storage, user management, email notifications and more.",
+      tags: ["Open Source", "SaaS"],
       imageSrc: cloudCsvimage,
-      //Project URL - Add Your Project Url Here
       url: "https://github.com/itsalb3rt/cloudcsv",
     },
     {
-      title: "Agile Visitors", //Project Title - Add Your Project Title Here
-      para:
-        "Application for registering employee entries with the possibility of generating reports, validating and storing users with minimal effort.", // Add Your Service Type Here
-      //Project Image - Add Your Project Image Here
+      title: "Agile Visitors",
+      para: "Employee entry registration with reports, validation and user management — minimal effort, maximum visibility.",
+      tags: ["Open Source", "Web App"],
       imageSrc: agileVisitorsImage,
-      //Project URL - Add Your Project Url Here
-      url: "https://github.com/itsalb3rt/agile-visitors"
+      url: "https://github.com/itsalb3rt/agile-visitors",
     },
     {
-      title: 'AMV Restoration',
-      para: 'Expert Solutions for Water Damage, Mold Remediation, Sewage Clean-Up, and Construction Projects.',
-      imageSrc: 'https://amvrestoration.com/img/logo.png',
-      url: 'https://amvrestoration.com'
+      title: "AMV Restoration",
+      para: "Expert solutions for water damage, mold remediation, sewage clean-up and construction projects.",
+      tags: ["Web", "Business"],
+      imageSrc: "https://amvrestoration.com/img/logo.png",
+      url: "https://amvrestoration.com",
     },
     {
-      title: "More", //Project Title - Add Your Project Title Here
-      para:
-        "Explore all my open source projects.", // Add Your Service Type Here
-      //Project Image - Add Your Project Image Here
+      title: "More",
+      para: "Explore all my open-source projects.",
+      tags: ["Open Source", "GitHub"],
       imageSrc: moreProjectsImage,
-      //Project URL - Add Your Project Url Here
       url: "https://github.com/itsalb3rt",
     },
   ],
 
   // End Work Section -----------------------
 
-  // About Secton --------------
+  // About Section --------------
   aboutParaOne:
-    "Frontend and Backend Developer with over 10 years of experience in web and hybrid mobile development. I specialize in JavaScript and have professional experience with PHP, Node.js, TypeScript, Go, Docker, React, Next.js, Vue, and the Quasar Framework (Android and iOS).",
+    "Full-stack developer with 10+ years building web and hybrid mobile products end to end. I work deep in the JavaScript ecosystem — Node.js, TypeScript, React, Vue and the Quasar framework for Android and iOS — and I'm equally at home in PHP, Go and Docker.",
   aboutParaTwo:
-    "Skilled in working with relational and spatial databases.",
+    "Relational and spatial databases, CI/CD pipelines and Linux servers are part of my daily toolkit. I care as much about the work between the feature and the deploy as I do about the feature itself.",
   aboutParaThree:
-    "Experienced in building automation workflows and integrations using n8n to streamline business processes and connect complex systems efficiently. At Zenith, implemented automation processes with n8n and LLM models with warehouse data and external data sets.",
-  aboutImage:
-    "https://pbs.twimg.com/profile_images/2044217314015326208/e3M01aIu_400x400.jpg",
+    "Recently I've specialized in automation: n8n workflows, LLM integrations and AI agents that replace manual busywork. At Zenith, I connected warehouse data and external datasets with LLM models to turn raw numbers into decisions.",
+  aboutImage: "https://pbs.twimg.com/profile_images/2044217314015326208/e3M01aIu_400x400.jpg",
 
   //   End About Section ---------------------
 
   // Skills Section ---------------
-
-  //   Import Icons from the top and link it here
-
   skills: [
     {
       img: jsIcon,
-      para:
-        "Extensive knowledge in the foundations of the language and different frameworks.",
+      name: "JavaScript",
+      para: "Deep foundation in the language and its frameworks — from core semantics to modern tooling.",
     },
     {
       img: nodejsLogo,
-      para:
-        "Experience in creating restful APIs using Node Js, Express, Sequelize among other server-side tools.",
+      name: "Node.js & APIs",
+      para: "RESTful APIs with Node, Express, Sequelize and the rest of the server-side toolbox.",
     },
     {
       img: dockerIcon,
-      para:
-        "Extensive professional experience with Docker, traefik and more.",
+      name: "Docker & Infra",
+      para: "Professional experience with Docker, Traefik, CI/CD pipelines and Linux servers.",
     },
     {
       img: vueIcon,
-      para:
-        "Experience with Vue building multi-purpose web applications and mobile APPs, Vuex, Vue router, Quasar Framework and much more.",
+      name: "Vue & Quasar",
+      para: "Multi-purpose web apps and hybrid mobile apps — Vuex, Vue Router and the Quasar framework.",
     },
     {
       img: reactIcon,
-      para:
-        "Professional experience working with React, redux, NextJS, and many more tools of the react ecosystem.",
+      name: "React & Next.js",
+      para: "Professional experience with React, Redux, Next.js and the wider React ecosystem.",
     },
     {
       img: designIcon,
-      para:
-        "Knowledge of graphic interface design and user experience, prototyping with Figma.",
+      name: "Design & UX",
+      para: "Interface design, user experience and prototyping with Figma.",
     },
     {
       img: n8nIcon,
-      para:
-        "Expert in workflow automation with n8n: building integrations to streamline business processes and connect complex systems, automation processes with LLM models on warehouse and external data sets, email processing, Telegram business communication, WhatsApp AI agents, and custom automation solutions.",
-    }
+      name: "n8n & AI Automation",
+      para: "Workflow automation, LLM integrations over warehouse and external data, email processing, Telegram business communication and WhatsApp AI agents.",
+    },
   ],
 
   // End Skills Section --------------------------
 
-  //   Promotion Section --------------------------
-
-  promotionHeading: "My recent activity on the internet",
+  //   Promotion / Activity Section --------------------------
+  promotionHeading: "Elsewhere on the internet",
   promotionPara:
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    "I write about engineering, automation and the business of software — plus the occasional open-source release.",
+  activity: [
+    {
+      name: "Blog",
+      url: "https://blog.albert.do",
+      desc: "Notes on engineering, automation and AI",
+    },
+    {
+      name: "GitHub",
+      url: "https://github.com/itsalb3rt",
+      desc: "Open-source projects and experiments",
+    },
+    {
+      name: "X / Twitter",
+      url: "https://twitter.com/alhidalgodev",
+      desc: "Short thoughts, 280 characters at a time",
+    },
+  ],
   // End Promotion Section -----------------
 
   //   Contact Section --------------
-
-  contactSubHeading: "Let's create your next experience together",
+  contactSubHeading: "Let's build something that lasts",
   social: [
-    // Add Or Remove The Link Accordingly
-    { img: githubIcon, url: "https://github.com/itsalb3rt", name: "GitHub" },
-    {
-      img: twitterIcon,
-      url: "https://twitter.com/alhidalgodev",
-      name: "Twitter/X",
-    },
-    {
-      img: linkedinIcon,
-      url: "https://www.linkedin.com/in/alhidalgodev",
-      name: "LinkedIn",
-    },
+    { name: "GitHub", url: "https://github.com/itsalb3rt" },
+    { name: "X / Twitter", url: "https://twitter.com/alhidalgodev" },
+    { name: "LinkedIn", url: "https://www.linkedin.com/in/alhidalgodev" },
   ],
 
   // End Contact Section ---------------
-  sponsors: []
+  sponsors: [],
 }
-
-// Thanks for using this template, I would love to hear from you contact me at hello@chetanverma.com

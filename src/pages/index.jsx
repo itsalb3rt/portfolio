@@ -7,20 +7,22 @@ import Header from "../components/Header"
 import Work from "../components/Work"
 import About from "../components/about"
 import Skills from "../components/skills"
+import Promotion from "../components/Promotion"
 import Footer from "../components/Footer"
 
 const IndexPage = () => (
   <Layout>
     <SEO
-    title="Albert Hidalgo"
-    description={'docker, quasar framework, vue, react, postgres, wordpress, static site, web developer, applications, mobile, ios, android, javascript, nodejs, ci/cd, pipeline, github actions, linux, servers, seo, n8n, workflow automation, integrations, LLM'}
-    lang="en"
-    pathname="/"
+      title="Albert Hidalgo"
+      description={'docker, quasar framework, vue, react, postgres, wordpress, static site, web developer, applications, mobile, ios, android, javascript, nodejs, ci/cd, pipeline, github actions, linux, servers, seo, n8n, workflow automation, integrations, LLM'}
+      lang="en"
+      pathname="/"
     />
     <Header />
     <Work />
     <About />
     <Skills />
+    <Promotion />
     <Footer />
   </Layout>
 )

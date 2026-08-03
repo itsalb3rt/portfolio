@@ -1,9 +1,11 @@
 const siteMetadata = {
   title: "Albert Hidalgo",
-  description: "Web apps, products, brands, and experience. Planning, design, development, quality assurance, and workflow automation with n8n.",
+  description:
+    "Mobile apps, web platforms & automation workflows built to last. Full-stack engineering, product design, quality assurance, and n8n automation.",
   author: "@alhidalgodev",
   siteUrl: "https://albert.do",
-  defaultImage: "https://pbs.twimg.com/profile_images/1195145668416946177/QrdEfW8C_400x400.jpg",
+  defaultImage: "/og-card.svg",
+  themeColor: "#0b0b0d",
 }
 
 export default siteMetadata

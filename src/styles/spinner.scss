@@ -11,7 +11,7 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: #ffffff;
+  background-color: var(--accent-ink);
   animation: spinnerAnimation 1.2s linear infinite;
 }
 

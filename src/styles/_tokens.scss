@@ -1,0 +1,62 @@
+// ─────────────────────────────────────────────
+// Design tokens
+// Dark technical/editorial system
+// ─────────────────────────────────────────────
+
+:root {
+  // Color
+  --bg: #0b0b0d;
+  --bg-soft: #0e0e11;
+  --surface: #141417;
+  --surface-2: #1a1a1f;
+  --surface-3: #212128;
+
+  --ink: #f2f2ef;
+  --ink-muted: #a3a3ad;
+  --ink-faint: #6f6f7a;
+
+  --accent: #c6f24e;
+  --accent-soft: rgba(198, 242, 78, 0.12);
+  --accent-ink: #0e1206;
+
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.16);
+
+  --danger: #ff6b6b;
+  --danger-bg: rgba(255, 107, 107, 0.08);
+  --success: #8ce99a;
+
+  // Type
+  --font-display: "Space Grotesk", system-ui, sans-serif;
+  --font-body: "Space Grotesk", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  // Spacing scale
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4.5rem;
+  --space-9: 6.5rem;
+
+  // Radii
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+
+  // Z-index
+  --z-nav: 1000;
+  --z-grain: 9999;
+
+  // Layout
+  --container: 1240px;
+
+  // Motion
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-fast: 180ms;
+  --duration-base: 320ms;
+}

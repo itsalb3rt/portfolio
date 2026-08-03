@@ -4,6 +4,7 @@ const Card = ({
   className = "",
   heading,
   paragraph,
+  tags = [],
   imgUrl,
   projectLink,
   loading = "lazy",
@@ -11,8 +12,8 @@ const Card = ({
 }) => {
   const hasProjectLink = Boolean(projectLink)
 
-  return (
-    <article className={`card ${className}`} style={{ border: "1px solid rgba(0, 0, 0, 0.1)" }}>
+  const content = (
+    <>
       <img
         className="card-image"
         src={imgUrl}
@@ -23,24 +24,41 @@ const Card = ({
         width="640"
         height="360"
       />
-      <div className="content">
-        <h1 className="header">{heading}</h1>
-        <p className="text">{paragraph}</p>
-        {hasProjectLink ? (
-          <a
-            href={projectLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn"
-          >
-            Explore
-          </a>
-        ) : (
-          <span className="btn btn-disabled" aria-disabled="true">
-            Explore
-          </span>
-        )}
+      <div className="card-shade" aria-hidden="true" />
+      <div className="card-content">
+        <div className="card-tags">
+          {tags.map((tag) => (
+            <span className="card-tag" key={tag}>
+              {tag}
+            </span>
+          ))}
+        </div>
+        <h2 className="card-title">{heading}</h2>
+        <p className="card-text">{paragraph}</p>
       </div>
+      <span className="card-arrow" aria-hidden="true">
+        ↗
+      </span>
+    </>
+  )
+
+  return (
+    <article className={`card ${className}`.trim()}>
+      {hasProjectLink ? (
+        <a
+          className="card-link"
+          href={projectLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`${heading} — ${paragraph}`}
+        >
+          {content}
+        </a>
+      ) : (
+        <span className="card-link" aria-disabled="true">
+          {content}
+        </span>
+      )}
     </article>
   )
 }

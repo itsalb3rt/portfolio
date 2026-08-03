@@ -1,17 +1,23 @@
 import React from "react"
 import { scroller } from "react-scroll"
-import externalLinkIcon from "../images/external-link.png"
+
+const NAV_LINKS = [
+  { id: "home", label: "Home", index: "01" },
+  { id: "work", label: "Work", index: "02" },
+  { id: "about", label: "About", index: "03" },
+  { id: "contact", label: "Contact", index: "04" },
+]
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = React.useState(false)
-  const [activeSection, setActiveSection] = React.useState('home')
+  const [activeSection, setActiveSection] = React.useState("home")
 
   const smoothScrollTo = (sectionName) => {
     scroller.scrollTo(sectionName, {
-      duration: 550,
+      duration: 700,
       delay: 0,
       smooth: true,
-      offset: -70,
+      offset: -72,
     })
   }
 
@@ -23,12 +29,11 @@ const Navbar = () => {
 
   React.useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
+      setIsScrolled(window.scrollY > 40)
 
-      // Lightweight active section detection
-      const sectionIds = ['home', 'work', 'about', 'contact']
-      let current = 'home'
-      const scrollY = window.scrollY + 110 // account for nav + a bit of offset
+      const sectionIds = ["home", "work", "about", "contact"]
+      let current = "home"
+      const scrollY = window.scrollY + 120
 
       for (const id of sectionIds) {
         const el = document.getElementById(id)
@@ -42,14 +47,13 @@ const Navbar = () => {
     }
 
     window.addEventListener("scroll", handleScroll, { passive: true })
-    // run once on mount
     handleScroll()
 
     return () => window.removeEventListener("scroll", handleScroll)
   }, [activeSection])
 
   return (
-    <div className={`section navbar ${isScrolled ? "scrolled" : ""}`}>
+    <nav className={`navbar ${isScrolled ? "scrolled" : ""}`} aria-label="Primary">
       <div className="container">
         <div className="navbar-wrapper">
           <a
@@ -57,40 +61,35 @@ const Navbar = () => {
             className="name"
             onClick={(event) => handleNavClick(event, "home")}
           >
-            Portfolio.
+            albert<span className="name-accent">.</span>do
           </a>
+
           <div className="links-wrapper">
+            {NAV_LINKS.map((link) => (
+              <a
+                key={link.id}
+                href={`#${link.id}`}
+                className={activeSection === link.id ? "active" : ""}
+                aria-current={activeSection === link.id ? "page" : undefined}
+                onClick={(event) => handleNavClick(event, link.id)}
+              >
+                <span className="nav-index">{link.index}</span>
+                {link.label}
+              </a>
+            ))}
             <a
-              href="#work"
-              className={activeSection === 'work' ? 'active' : ''}
-              aria-current={activeSection === 'work' ? 'page' : undefined}
-              onClick={(event) => handleNavClick(event, "work")}
+              href="https://blog.albert.do"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="nav-external"
             >
-              Work
-            </a>
-            <a
-              href="#about"
-              className={activeSection === 'about' ? 'active' : ''}
-              aria-current={activeSection === 'about' ? 'page' : undefined}
-              onClick={(event) => handleNavClick(event, "about")}
-            >
-              About
-            </a>
-            <a
-              href="#contact"
-              className={activeSection === 'contact' ? 'active' : ''}
-              aria-current={activeSection === 'contact' ? 'page' : undefined}
-              onClick={(event) => handleNavClick(event, "contact")}
-            >
-              Contact
-            </a>
-            <a href="https://blog.albert.do" target="_blank" rel="noopener noreferrer">
-              Blog <img style={{ width: 10 }} src={externalLinkIcon} alt="Open blog" />
+              <span className="nav-index">05</span>
+              Blog <span className="nav-arrow" aria-hidden="true">↗</span>
             </a>
           </div>
         </div>
       </div>
-    </div>
+    </nav>
   )
 }
 

@@ -1,52 +1,109 @@
 @use "./breakpoints" as bp;
 
 .footer-container {
-  width: 80vw;
-  max-width: 1024px;
-  margin-top: 5vh;
-  margin-bottom: 5vh;
+  padding: var(--space-9) 0 var(--space-8);
   display: flex;
   flex-direction: column;
   align-items: center;
-  h1 {
-    font-size: 3rem;
-    line-height: 1.15;
+  text-align: center;
+}
+
+.footer-head {
+  max-width: 620px;
+  margin: 0 auto;
+
+  .section-title {
+    margin-top: var(--space-3);
   }
-  h2 {
-    font-size: 1.5rem;
-    overflow: hidden;
-    @include bp.phone {
-      display: none;
-    }
-    @include bp.lgphone {
-      font-size: 14px;
-    }
-    @include bp.tablet {
-      font-size: 1.2rem;
-    }
+
+  .footer-intro {
+    color: var(--ink-muted);
+    line-height: 1.65;
+    margin: var(--space-4) 0 0;
   }
+}
+
+.footer-form {
+  width: 100%;
+  max-width: 620px;
+  margin-top: var(--space-7);
+  text-align: left;
+}
+
+.footer-elsewhere {
+  margin-top: var(--space-7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+
   .email-link {
-    font-size: 1.5rem;
-    color: black;
+    font-family: var(--font-display);
+    font-size: clamp(1.3rem, 3vw, 1.8rem);
+    font-weight: 600;
+    color: var(--ink);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--accent);
+    }
   }
+
   .social-icons {
-    margin-top: 20px;
+    display: flex;
+    gap: var(--space-3);
+
     a {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-width: 48px;
-      min-height: 48px;
-    }
-    img {
-      height: 2rem;
-      margin: 10px;
+      width: 44px;
+      height: 44px;
+      border: 1px solid var(--border-strong);
+      border-radius: var(--radius-md);
+      color: var(--ink-muted);
+      transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease,
+        transform 0.2s var(--ease-out);
+
+      &:hover {
+        color: var(--accent);
+        border-color: rgba(198, 242, 78, 0.4);
+        background: var(--surface);
+        transform: translateY(-2px);
+      }
+
+      &:active {
+        transform: translateY(0) scale(0.96);
+      }
     }
   }
-  span {
-    margin-top: 10px;
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: var(--space-5) 0 var(--space-6);
+  border-top: 1px solid var(--border);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--ink-faint);
+
+  @include bp.phone {
+    flex-direction: column;
+    text-align: center;
   }
-  span.icon {
-    color: red;
+
+  .back-to-top {
+    color: var(--ink-muted);
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--accent);
+    }
   }
 }

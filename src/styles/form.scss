@@ -1,53 +1,111 @@
-/* Contact form — unified with site black/gray aesthetic */
+@use "./breakpoints" as bp;
+
 form {
-  margin-bottom: 20px;
+  margin-bottom: var(--space-4);
   width: 100%;
-  max-width: 620px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+
+  @include bp.phone {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-field {
+  margin-bottom: var(--space-4);
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.45rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
 }
 
 form input,
 form textarea {
-  margin-bottom: 14px;
-  padding: 12px 14px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 16px; /* prevent iOS zoom */
-  color: #222;
+  margin-bottom: 0;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-md);
+  font-size: 16px;
+  color: var(--ink);
   width: 100%;
-  background: #fff;
+  background: var(--surface);
   box-sizing: border-box;
-  font-family: "Montserrat", system-ui, sans-serif;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
-}
+  font-family: var(--font-body);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 
-input:focus,
-textarea:focus {
-  outline: none;
-  border-color: #222;
-  box-shadow: 0 0 0 3px rgba(17, 17, 17, 0.08);
+  &::placeholder {
+    color: var(--ink-faint);
+  }
+
+  &:hover {
+    border-color: rgba(255, 255, 255, 0.26);
+  }
+
+  &:focus {
+    outline: none;
+    border-color: var(--accent);
+    background: var(--surface-2);
+    box-shadow: 0 0 0 3px rgba(198, 242, 78, 0.14);
+  }
 }
 
 textarea {
   min-height: 140px;
   resize: vertical;
+  line-height: 1.55;
 }
 
-form label {
-  display: block;
-  margin-bottom: 6px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: #333;
+.form-submit {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-3);
 }
 
-/* Error message */
 .form-error,
 form p[role="alert"] {
-  color: #a00;
-  background: #fff0f0;
-  border: 1px solid #f5c2c2;
-  padding: 10px 12px;
-  border-radius: 4px;
-  margin: 12px 0;
+  color: var(--danger);
+  background: var(--danger-bg);
+  border: 1px solid rgba(255, 107, 107, 0.3);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-sm);
+  margin: var(--space-3) 0;
   font-size: 0.9rem;
+}
+
+.success-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-6);
+  background: var(--accent-soft);
+  border: 1px solid rgba(198, 242, 78, 0.35);
+  border-radius: var(--radius-lg);
+
+  .success-title {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--accent);
+  }
+
+  .success-sub {
+    margin: 0;
+    color: var(--ink-muted);
+  }
+
+  .success-reset {
+    margin-top: var(--space-3);
+  }
 }

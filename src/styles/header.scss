@@ -13,18 +13,6 @@
   }
 }
 
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1.6fr 1fr;
-  gap: var(--space-7);
-  align-items: start;
-
-  @include bp.tablet {
-    grid-template-columns: 1fr;
-    gap: var(--space-6);
-  }
-}
-
 .hero-main {
   display: flex;
   flex-direction: column;
@@ -56,89 +44,6 @@
   display: flex;
   gap: var(--space-3);
   flex-wrap: wrap;
-}
-
-// ── Side info card ───────────────────────────
-
-.hero-card {
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  background: linear-gradient(160deg, var(--surface) 0%, rgba(20, 20, 23, 0.4) 100%);
-  padding: var(--space-5);
-  font-family: var(--font-mono);
-  font-size: 0.82rem;
-
-  .hero-fact {
-    display: flex;
-    flex-direction: column;
-    gap: 0.35rem;
-    padding: var(--space-3) 0;
-    border-bottom: 1px dashed var(--border);
-
-    &:last-of-type {
-      border-bottom: none;
-    }
-  }
-
-  .hero-fact-key {
-    color: var(--ink-faint);
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    font-size: 0.68rem;
-  }
-
-  .hero-fact-value {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: var(--ink);
-    line-height: 1.5;
-  }
-
-  .status-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: var(--accent);
-    box-shadow: 0 0 0 3px var(--accent-soft);
-    animation: status-pulse 2.4s ease-in-out infinite;
-
-    @media (prefers-reduced-motion: reduce) {
-      animation: none;
-    }
-  }
-
-  .hero-fact-socials {
-    .hero-fact-value {
-      flex-wrap: wrap;
-    }
-
-    a {
-      color: var(--ink-muted);
-      text-decoration: none;
-      transition: color 0.2s ease;
-
-      &:hover {
-        color: var(--accent);
-      }
-    }
-
-    .hero-social-sep {
-      color: var(--ink-faint);
-    }
-  }
-}
-
-@keyframes status-pulse {
-  0%,
-  100% {
-    opacity: 1;
-    box-shadow: 0 0 0 3px var(--accent-soft);
-  }
-  50% {
-    opacity: 0.6;
-    box-shadow: 0 0 0 6px var(--accent-soft);
-  }
 }
 
 // ── Stats strip ──────────────────────────────

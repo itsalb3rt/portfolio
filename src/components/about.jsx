@@ -10,7 +10,7 @@ const About = () => {
           <div className="about-copy">
             <Reveal>
               <p className="section-eyebrow">03 · About</p>
-              <h1 className="section-title">About</h1>
+              <h2 className="section-title">About</h2>
               <p className="about-statement">{data.aboutParaOne}</p>
               <p className="about-body">{data.aboutParaTwo}</p>
               <p className="about-body">{data.aboutParaThree}</p>

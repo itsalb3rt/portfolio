@@ -11,7 +11,7 @@ const Skills = () => {
             <div className="section-head">
               <div>
                 <p className="section-eyebrow">04 · Capabilities</p>
-                <h1 className="section-title">Skills</h1>
+                <h2 className="section-title">Skills</h2>
               </div>
               <p className="work-intro">
                 The tools and disciplines I reach for daily — from language

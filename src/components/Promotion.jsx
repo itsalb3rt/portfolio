@@ -11,7 +11,7 @@ const Promotion = () => {
             <div className="section-head">
               <div>
                 <p className="section-eyebrow">05 · Activity</p>
-                <h1 className="section-title">{data.promotionHeading}</h1>
+                <h2 className="section-title">{data.promotionHeading}</h2>
               </div>
               <p className="work-intro">{data.promotionPara}</p>
             </div>

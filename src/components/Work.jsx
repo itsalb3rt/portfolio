@@ -18,7 +18,7 @@ const Work = () => {
             <div className="section-head">
               <div>
                 <p className="section-eyebrow">02 · Selected work</p>
-                <h1 className="section-title">Work</h1>
+                <h2 className="section-title">Work</h2>
               </div>
               <p className="work-intro">
                 Selected projects focused on product quality, business impact,

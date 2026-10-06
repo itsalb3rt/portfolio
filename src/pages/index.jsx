@@ -13,10 +13,8 @@ import Footer from "../components/Footer"
 const IndexPage = () => (
   <Layout>
     <SEO
-      title="Albert Hidalgo"
-      description={'docker, quasar framework, vue, react, postgres, wordpress, static site, web developer, applications, mobile, ios, android, javascript, nodejs, ci/cd, pipeline, github actions, linux, servers, seo, n8n, workflow automation, integrations, LLM'}
+      title="Albert Hidalgo | Portfolio"
       lang="en"
-      pathname="/"
     />
     <Header />
     <Work />

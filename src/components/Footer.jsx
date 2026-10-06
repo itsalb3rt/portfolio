@@ -22,7 +22,7 @@ const Footer = () => {
           <Reveal>
             <div className="footer-head">
               <p className="section-eyebrow">06 · Contact</p>
-              <h1 className="section-title">{data.contactSubHeading}</h1>
+              <h2 className="section-title">{data.contactSubHeading}</h2>
               <p className="footer-intro">
                 Planning, design, development, quality assurance — or just a
                 question about automation. My inbox is open.

@@ -6,8 +6,7 @@ import SEO from "../components/seo"
 const NotFoundPage = () => (
   <Layout>
     <SEO
-      title="404: Not found"
-      pathname="/404"
+      title="404: Not found | Albert Hidalgo | Portfolio"
       meta={[{ name: "robots", content: "noindex, nofollow" }]}
     />
     <section className="section" style={{ minHeight: "70vh" }}>

@@ -25,6 +25,7 @@ import gtc from './images/gtc.webp'
 import reinapp from './images/reinapp.webp'
 import bookstantify from './images/bookstantify.webp'
 import calificado from './images/calificado.webp'
+import popsportcarsclub from './images/popsportcarsclub.webp'
 
 // About portrait (local asset — no external CDN)
 import portrait from './images/albert-hidalgo.png'
@@ -71,6 +72,13 @@ export default {
       tags: ["SaaS", "AI", "EdTech"],
       imageSrc: calificado,
       url: "https://calificado.do",
+    },
+    {
+      title: "POP Sport Cars Club",
+      para: "A community for sports car enthusiasts to connect, share experiences, and showcase their vehicles.",
+      tags: ["Community", "Cars", "Web"],
+      imageSrc: popsportcarsclub,
+      url: "https://popsportcarsclub.com"
     },
     {
       title: "REOREI",

@@ -26,6 +26,7 @@ import reinapp from './images/reinapp.webp'
 import bookstantify from './images/bookstantify.webp'
 import calificado from './images/calificado.webp'
 import popsportcarsclub from './images/popsportcarsclub.webp'
+import facilPiezasImage from './images/facil-piezas.jpg'
 
 // About portrait (local asset — no external CDN)
 import portrait from './images/albert-hidalgo.png'
@@ -79,6 +80,13 @@ export default {
       tags: ["Community", "Cars", "Web"],
       imageSrc: popsportcarsclub,
       url: "https://popsportcarsclub.com"
+    },
+    {
+      title: "Fácil Piezas",
+      para: "Android, IOS and Web App for sale of vehicle parts, geolocation, in app chat and mucho more features",
+      tags: ["Mobile", "E-commerce", "Automotive"],
+      imageSrc: facilPiezasImage,
+      url: "https://facilpiezas.com",
     },
     {
       title: "REOREI",
